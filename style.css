@@ -260,6 +260,59 @@ section .title::after{
     background: none;
 }
 
+/* Add this style for consistent spacing */
+.icons-3d {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the right */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.icon-card {
+    margin-right: 10px; /* Adjust spacing between cards */
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-card:last-child {
+    margin-right: 0; /* Remove margin for the last icon */
+}
+
+.icons-3d .icon-card a {
+    display: block;
+    text-decoration: none;
+    color: #1e0661;
+    font-size: 30px;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icons-3d .icon-card a:hover {
+    transform: scale(1.1);
+}
+/* Define the blinking animation */
+@keyframes blink {
+    0% {
+      color: #393811; /* Initial color (white) */
+    }
+    50% {
+      color: crimson; /* High contrast color */
+    }
+    100% {
+      color: #ffffff; /* Back to initial color (white) */
+    }
+  }
+  
+  /* Apply the animation to the "Hire Me" text */
+  .home-content a {
+    animation: blink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
+  }
+  
+
+
+
 
 
 
@@ -576,6 +629,17 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Styling for the freelancer section */
 .freelancer {
     text-align: center;
@@ -620,13 +684,6 @@ p {
 .btn:hover {
     background-color: #0056b3;
 }
-
-
-
-
-
-
-
 
 body {
     margin: 0;
@@ -682,96 +739,101 @@ body {
 
 
 
-/* teams section styling */
-.Projects .title::after{ 
+
+
+
+
+
+
+
+
+
+
+/* Project section styling */
+.Projects .title::after{
     content: "Project Description";
-}
-.Projects {
+    }
+    .Projects {
     background-color: rgb(201, 182, 32);
-}
-.Projects .carousel .slider{
+    }
+    .Projects .carousel .slider{
     background: #0a0453;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     
-}
- .Projects .carousel .slider:hover{
-    background: crimson;                       
-}
-.Projects .carousel .slider .box{
+    }
+    .Projects .carousel .slider:hover{
+    background: crimson;
+    }
+    .Projects .carousel .slider .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-}
-.Projects .carousel .slider:hover .box{
+    }
+    .Projects .carousel .slider:hover .box{
     transform: scale(1.05);
-}
-.Projects .carousel .slider .text{
+    }
+    .Projects .carousel .slider .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-}
-.Projects .carousel .slider img{
+    }
+    .Projects .carousel .slider img{
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid crimson;
     transition: all 0.3s ease;
-}
-.Projects .carousel .slider:hover img{
+    }
+    .Projects .carousel .slider:hover img{
     border-color: #120707;
-} 
-* {
+    }
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body styles */
-body {
+    }
+    
+    /* Body styles */
+    body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-}
-
-/* Slideshow container */
-.Projects {
+    }
+    
+    /* Slideshow container */
+    .Projects {
     text-align: center;
     padding: 50px 0;
-}
-
-.section-heading {
+    }
+    
+    .section-heading {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: bold;
-}
-
-.section-heading span {
+    }
+    
+    .section-heading span {
     color: crimson;
-}
-
-.section-subheading {
+    }
+    
+    .section-subheading {
     font-size: 18px;
     color: #ebe7e7;
     margin-bottom: 40px;
-}
-
-/* Slider container */
-.slider-container {
-    overflow: hidden;
-    position: relative;
-    margin-top: 20px;
-}
-
-/* Slider */
+    }
+    
+    /* Slider container */
+   
 .slider {
     display: flex;
+    justify-content: center; /* Align slides horizontally to the center */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -779,44 +841,58 @@ body {
     flex: 0 0 33.33%; /* Display 3 slides per view */
     padding: 0 10px;
     text-align: center;
+    margin: 0 auto; /* Center the individual slides */
 }
 
-/* Slider dots (if using a pagination style) */
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.project-info p {
+    text-align: justify;
+    margin: 0; /* Remove any default margins */
 }
 
-.slider-dots span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #a02222;
+/* ... (other styles) */
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
     margin: 0 5px;
+    font-size: 1.2rem;
     cursor: pointer;
-}
-/* Active dot */
-.slider-dots span.active {
-    background: #333;
-}
-
-
-
-
-
-
-
-
-
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
 }
 
-/* Section styles */
+button:hover {
+    background-color: #555; /* Change button background color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Work Section styles */
 .work {
     padding: 85px 0;
     background-color: #de9b9b;
@@ -923,6 +999,19 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* contact section styling */
 .contact .title::after{
     content: "get in touch";
@@ -1002,7 +1091,7 @@ body {
 .right form .button-area button{
   color: #fff;
   display: block;
-  width: 160px!important;
+  width: auto;
   height: 45px;
   outline: none;
   font-size: 18px;

@@ -14,21 +14,25 @@ $(document).ready(function(){
             $('.scroll-up-btn').removeClass("show");
         }
     });
+    
     // slide-up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
         // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
+    
     $('.navbar .menu li a').click(function(){
         // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
     });
+    
     // toggle menu/navbar script
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+    
     // typing text animation script
     var typed = new Typed(".typing", {
         strings: ["Developer", "Blogger", "Designer", "Freelancer"],
@@ -36,12 +40,14 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
+    
     var typed = new Typed(".typing-2", {
         strings: ["Developer", "Blogger", "Designer", "Freelancer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
+    
     // owl carousel script
     $('.carousel').owlCarousel({
         margin: 20,
@@ -64,4 +70,26 @@ $(document).ready(function(){
             }
         }
     });
+    
+    // AJAX form submission
+    $('#contact-form').submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = $(this).serialize(); // Serialize form data
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: formData,
+            dataType: 'json', // Expect JSON response
+            success: function(response) {
+                // Handle success, e.g., show a success message
+                console.log(response.message); // Log the response message
+            },
+            error: function() {
+                // Handle error, e.g., show an error message
+                console.log('Error sending message');
+            }
+        });
+    });
 });
+

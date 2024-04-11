@@ -207,11 +207,26 @@ section .title::after{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* home section styling */
 .home{
     display: flex;
     background: url("banners.jpg") no-repeat center;
-    height: 70vh;
+    height: 100vh;
     color: #1e0661;
     min-height: 00px;
     background-size: cover;
@@ -281,6 +296,7 @@ section .title::after{
 }
 
 .icons-3d .icon-card a {
+    margin-top: 400px; /* Adjust as needed */
     display: block;
     text-decoration: none;
     color: #1e0661;
@@ -324,6 +340,24 @@ section .title::after{
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 /* about section styling */
 .about .title::after{
     content: "who i am";
@@ -332,6 +366,7 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
+    /* height: 100vh; */
     height: 400px;
     width: 400px;
     object-fit: cover;
@@ -368,6 +403,25 @@ section .title::after{
     color: crimson;
     background: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -444,11 +498,38 @@ body {
 
 
 
-/* Section styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Education Section styles */
 .Education {
     background: #9c8adc;
+    height: 100vh;
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 60px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -456,7 +537,7 @@ body {
 
 .Education-heading {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .Education-heading span {
@@ -477,6 +558,7 @@ p {
 
 .card {
     background-color: #e9e9e9;
+    /* width: calc(80% - 20px); */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -492,7 +574,7 @@ p {
 
 .card h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .card p {
@@ -505,6 +587,28 @@ p {
     color: #3498db;
     font-size: 18px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -640,6 +744,9 @@ p {
 
 
 
+
+
+
 /* Styling for the freelancer section */
 .freelancer {
     text-align: center;
@@ -749,17 +856,21 @@ body {
 
 
 
+
+
+
 /* Project section styling */
 .Projects .title::after{
     content: "Project Description";
     }
     .Projects {
+        height: 100vh;
     background-color: rgb(201, 182, 32);
     }
     .Projects .carousel .slider{
     background: #0a0453;
     border-radius: 6px;
-    padding: 25px 35px;
+    padding: 30px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -810,7 +921,7 @@ body {
     /* Slideshow container */
     .Projects {
     text-align: center;
-    padding: 50px 0;
+    padding: 75px 0;
     }
     
     .section-heading {
@@ -892,8 +1003,8 @@ button:hover {
 
 
 
-/* Work Section styles */
-.work {
+/* Technology Section styles */
+.Technology {
     padding: 85px 0;
     background-color: #de9b9b;
     text-align: center;
@@ -904,7 +1015,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.work p {
+.Technology p {
     font-size: 16px;
     color: #111010;
     margin-bottom: 40px;
@@ -1264,6 +1375,15 @@ footer span a:hover{
 
 
 
+
+
+
+
+
+
+
+
+
 /* Styles for scroll indicator */
 .scroll-indicator {
     position: fixed;
@@ -1295,10 +1415,10 @@ footer span a:hover{
         color: #ff8000; /* Orange */
     }
     20% {
-        color: #ffff00; /* Yellow */
+        color: #5f5f0d; /* Yellow */
     }
     30% {
-        color: #00ff00; /* Green */
+        color: #295129; /* Green */
     }
     40% {
         color: #00ffff; /* Cyan */
@@ -1316,7 +1436,7 @@ footer span a:hover{
         color: #ff0080; /* Pink */
     }
     90% {
-        color: #0080ff; /* Sky Blue */
+        color: #f75cdd; /* Sky Blue */
     }
     100% {
         color: #800000; /* Dark maroon */
@@ -1327,3 +1447,7 @@ footer span a:hover{
     opacity: 1;
     animation-duration: 0.2s; /* Faster animation on hover */
 }
+
+
+
+

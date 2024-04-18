@@ -30,6 +30,18 @@ html{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* all similar content styling codes */
 section{
     padding: 100px 0;
@@ -80,6 +92,11 @@ section .title::after{
     background: #d5d8d0;
     transform: translateX(-50%);
 }
+
+
+
+
+
 
 
 
@@ -222,6 +239,11 @@ section .title::after{
 
 
 
+
+
+
+
+
 /* home section styling */
 .home{
     display: flex;
@@ -233,8 +255,30 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(130, 190, 190);
-    
 }
+/* .home {
+    position: relative; 
+    display: flex;
+    background: url("banner3.jpg") no-repeat center;
+    height: 100vh;
+    color: #3b1eae;
+    min-height: 00px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px); 
+}  */
+
+
 .home .max-width{
   width: 100%;
   display: flex;
@@ -260,7 +304,7 @@ section .title::after{
 }
 .home .home-content a{
     display: inline-block;
-    background: crimson;
+    background: rgb(66, 4, 4);
     color: #1b0606;
     font-size: 25px;
     padding: 12px 36px;
@@ -274,7 +318,6 @@ section .title::after{
     color: crimson;
     background: none;
 }
-
 /* Add this style for consistent spacing */
 .icons-3d {
     display: flex;
@@ -309,22 +352,61 @@ section .title::after{
     transform: scale(1.1);
 }
 /* Define the blinking animation */
-@keyframes blink {
+@keyframes multiColorBlink {
     0% {
-      color: #393811; /* Initial color (white) */
+        color: blue;
     }
-    50% {
-      color: crimson; /* High contrast color */
+    20% {
+        color: red;
+    }
+    40% {
+        color: green;
+    }
+    60% {
+        color: orange;
+    }
+    80% {
+        color: purple;
     }
     100% {
-      color: #ffffff; /* Back to initial color (white) */
+        color: blue;
     }
-  }
-  
+}
   /* Apply the animation to the "Hire Me" text */
   .home-content a {
     animation: blink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
   }
+  /* Add this CSS for positioning the "Download CV" button */
+  .download-cv {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    margin-top: -30px; /* Half of the button's height */
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
@@ -337,20 +419,6 @@ section .title::after{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
 
@@ -676,35 +744,32 @@ p {
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
+.skills-content .right .Java::before{
     width: 80%;
 }
-.skills-content .right .css::before{
-    width: 60%;
+.skills-content .right .Angular::before{
+    width: 30%;
 }
-.skills-content .right .js::before{
-    width: 50%;
-}
-.skills-content .right .php::before{
+.skills-content .right .DSA::before{
     width: 60%;
 }
 .skills-content .right .mysql::before{
-    width: 70%;
+    width: 80%;
 }
 .skills-content .right .SQL::before{
     width: 60%;
 }
 .skills-content .right .Springboot::before{
-    width: 70%;
+    width: 40%;
 }
 .skills-content .right .Hibernate::before{
-    width: 80%;
+    width: 50%;
 }
 .skills-content .right .Maven::before{
-    width: 80%;
+    width: 40%;
 }
 .skills-content .right .Servlet::before{
-    width: 70%;
+    width: 50%;
 }
 .skills-content .right .API::before{
     width: 50%;
@@ -722,7 +787,7 @@ p {
     width: 60%;
 }
 .skills-content .right .OptionTrading::before{
-    width: 80%;
+    width: 100%;
 }
 .skills-content .right .AndroidStudio::before{
     width: 60%;
@@ -747,22 +812,30 @@ p {
 
 
 
-/* Styling for the freelancer section */
-.freelancer {
+
+
+
+
+
+
+
+
+/* Styling for the Resume section */
+.Resume {
     text-align: center;
     padding: 50px;
     background-color: #f5f5f5;
 }
 
 /* Styling for the heading */
-.freelancer h1 {
+.Resume h1 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #ffffff;
 }
 
 /* Styling for the paragraph */
-.freelancer p {
+.Resume p {
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -800,7 +873,7 @@ body {
 .element.style{
     color: white;
 }
-.freelancer {
+.Resume {
     background-image: url('java-developer.jpg');
     background-size: cover;
     background-position: center;
@@ -809,12 +882,12 @@ body {
     text-align: center;
 }
 
-.freelancer h1 {
+.Resume h1 {
     font-size: 70px;
     margin-bottom: 10px;
 }
 
-.freelancer p {
+.Resume p {
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -836,6 +909,25 @@ body {
     background-color: #333; /* You can adjust the color to your preference */
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -982,6 +1074,78 @@ button {
 button:hover {
     background-color: #555; /* Change button background color on hover */
 }
+.Projects .project-info a {
+    color: blue; /* Set the color to blue for all project links */
+}
+/* CSS code */
+@keyframes multiColorBlink {
+    0% {
+        color: blue;
+    }
+    20% {
+        color: red;
+    }
+    40% {
+        color: green;
+    }
+    60% {
+        color: orange;
+    }
+    80% {
+        color: purple;
+    }
+    100% {
+        color: blue;
+    }
+}
+.github-link {
+    animation: multiColorBlink 1s infinite;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+/* Update the margin-bottom for section-heading */
+.section-heading {
+    font-size: 36px;
+    margin-bottom: 5px; /* Decrease the margin-bottom */
+    font-weight: bold;
+}
+
+/* Update the margin-top for explore-projects */
+.explore-projects {
+    text-align: center;
+    margin-top: 10px; /* Decrease the margin-top */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -180,12 +180,20 @@ section .title::after{
   }
   
 /* menu btn styling */
-.menu-btn{
+.menu-btn {
     color: #910909;
     font-size: 23px;
     cursor: pointer;
-    display: none;
+    display: none; /* Hide the menu button by default */
 }
+
+/* Show the menu button only on Android devices */
+@media only screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+}
+
 .scroll-up-btn{
     position: fixed;
     height: 45px;

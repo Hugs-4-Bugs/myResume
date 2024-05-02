@@ -147,7 +147,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #bec0d3;
+    color: #09148f;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -157,7 +157,8 @@ section .title::after{
     color: crimson;
 }
 .navbar.sticky .menu li a:hover{
-    color: #1810a6;
+    /* color: #1810a6; */
+    color: #f9f9f9;
 }
 /* Add your existing styles here */
 
@@ -212,6 +213,7 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
+
 
 
 

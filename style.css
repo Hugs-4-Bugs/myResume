@@ -253,6 +253,14 @@ section .title::after{
 
 
 
+
+
+
+
+
+
+
+
 /* home section styling */
 .home{
     display: flex;
@@ -330,6 +338,7 @@ section .title::after{
 /* Add this style for consistent spacing */
 .icons-3d {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end; /* Align icons to the right */
     position: absolute;
     top: 50%;
@@ -338,6 +347,8 @@ section .title::after{
 }
 
 .icon-card {
+    flex: 0 0 calc(10% - 20px); /* Adjust the width of each icon card */
+    /* margin: 10px; Add some spacing between icon cards */
     margin-right: 10px; /* Adjust spacing between cards */
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
@@ -360,6 +371,12 @@ section .title::after{
 .icons-3d .icon-card a:hover {
     transform: scale(1.1);
 }
+@media only screen and (max-width: 768px) {
+    .icon-card {
+        flex: 0 0 calc(20% - 20px); /* Adjust icon card width for smaller screens */
+    }
+}
+
 /* Define the blinking animation */
 @keyframes multiColorBlink {
     0% {
@@ -381,10 +398,10 @@ section .title::after{
         color: blue;
     }
 }
-  /* Apply the animation to the "Hire Me" text */
-  .home-content a {
-    animation: blink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
-  }
+ /* Apply the animation to the "Download CV" link */
+.home-content a[href="https://drive.google.com/file/d/1tyOyqtcmTrOFYCc2uttsb152GuaE5FNN/view"] {
+    animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
+}
   /* Add this CSS for positioning the "Download CV" button */
   .download-cv {
     position: absolute;
@@ -1045,7 +1062,9 @@ body {
    
 .slider {
     display: flex;
-    justify-content: center; /* Align slides horizontally to the center */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+    /* justify-content: center; Align slides horizontally to the center */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -1124,7 +1143,18 @@ button:hover {
     text-align: center;
     margin-top: 10px; /* Decrease the margin-top */
 }
+/* Adjust the width of cards for smaller screens */
+.card {
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+}
 
+/* Media query for screens smaller than 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%; /* Make cards occupy full width */
+    }
+}
 
 
 
@@ -1278,6 +1308,19 @@ button:hover {
 .owl-dot:hover{
     background: crimson!important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1652,6 +1695,19 @@ footer span a:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Chat button styles */
 .chat-button {
     width: 60px; /* Adjust the width */
@@ -1884,4 +1940,3 @@ footer span a:hover{
     color: #888; /* Light gray color */
   }
   
-

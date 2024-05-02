@@ -147,7 +147,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #09148f;
+    color: #bec0d3;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -212,7 +212,6 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
-
 
 
 

@@ -774,6 +774,44 @@
 
 
 
+
+  
+ <!-- Chat button -->
+ <div class="container">
+    <button class="chat-button" onclick="toggleChat()">
+      <img src="chat.png" alt="Message" class="chat-icon">
+    </button>
+    <div class="chat-box" id="chat-box">
+        
+      <div class="chat-header">
+        <span class="close" onclick="toggleChat()">&times;</span>
+      </div>
+      <div class="chat-container">
+        <div class="chat-body" id="chat-body">
+          <!-- Predefined texts will be displayed here -->
+          <p>Welcome! Feel free to ask me anything.</p>
+        </div>
+        <div class="chat-footer">
+          <input type="text" id="chat-input" placeholder="Type your message...">
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+      <div class="typing-indicator" id="typing-indicator"></div>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+
+
+
+
+
+
     
     
     <!-- footer section start -->

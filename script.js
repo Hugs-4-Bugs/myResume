@@ -136,6 +136,27 @@
 
 
 
+
+
+$(document).ready(function(){
+  // Toggle menu/navbar script
+  function toggleMenu() {
+      $('.navbar .menu').toggleClass("active");
+      $('.menu-btn i').toggleClass("active");
+  }
+  
+  // Show the menu button only on Android devices
+  if(/Android/i.test(navigator.userAgent)) {
+      $('.menu-btn').css("display", "block");
+  }
+  
+  // Toggle menu/navbar when menu button is clicked
+  $('.menu-btn').click(function(){
+      toggleMenu();
+  });
+
+
+
 function toggleNav() {
     const nav = document.getElementById("nav");
     nav.classList.toggle("nav-open");
@@ -550,3 +571,4 @@ function toggleNav() {
     chatBody.scrollTop = 0; // Scroll to the top instead of the bottom
   }
   
+});

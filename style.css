@@ -321,7 +321,7 @@ section .title::after{
 }
 .home .home-content a{
     display: inline-block;
-    background: rgb(66, 4, 4);
+    background: rgb(57, 59, 2);
     color: #1b0606;
     font-size: 25px;
     padding: 12px 36px;
@@ -377,31 +377,30 @@ section .title::after{
     }
 }
 
-/* Define the blinking animation */
+/* Define the multi-color blinking animation */
 @keyframes multiColorBlink {
     0% {
         color: blue;
     }
-    20% {
+    25% {
         color: red;
     }
-    40% {
+    50% {
         color: green;
     }
-    60% {
+    75% {
         color: orange;
     }
-    80% {
-        color: purple;
-    }
     100% {
-        color: blue;
+        color: rgb(133, 188, 16);
     }
 }
- /* Apply the animation to the "Download CV" link */
-.home-content a[href="https://drive.google.com/file/d/1tyOyqtcmTrOFYCc2uttsb152GuaE5FNN/view"] {
+
+/* Apply the animation to the "Download CV" link */
+.home-content a[href="https://drive.google.com/file/d/1MHxkIoBKwOzG8JaoFaGM2Jn5aZULuB8r/view"] {
     animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
 }
+
   /* Add this CSS for positioning the "Download CV" button */
   .download-cv {
     position: absolute;

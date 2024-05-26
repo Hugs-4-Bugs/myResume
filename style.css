@@ -976,114 +976,168 @@ body {
 
 
 
+
 /* Project section styling */
-.Projects .title::after{
+.Projects .title::after {
     content: "Project Description";
-    }
-    .Projects {
-        height: 100vh;
+}
+.Projects {
+    height: 100vh;
     background-color: rgb(201, 182, 32);
-    }
-    .Projects .carousel .slider{
+}
+.Projects .carousel .slider {
     background: #0a0453;
     border-radius: 6px;
     padding: 30px 35px;
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
-    
-    }
-    .Projects .carousel .slider:hover{
+}
+.Projects .carousel .slider:hover {
     background: crimson;
-    }
-    .Projects .carousel .slider .box{
+}
+.Projects .carousel .slider .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    }
-    .Projects .carousel .slider:hover .box{
+}
+.Projects .carousel .slider:hover .box {
     transform: scale(1.05);
-    }
-    .Projects .carousel .slider .text{
+}
+.Projects .carousel .slider .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-    }
-    .Projects .carousel .slider img{
+}
+.Projects .carousel .slider img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid crimson;
     transition: all 0.3s ease;
-    }
-    .Projects .carousel .slider:hover img{
+}
+.Projects .carousel .slider:hover img {
     border-color: #120707;
-    }
-    * {
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    
-    /* Body styles */
-    body {
+}
+
+/* Body styles */
+body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    }
-    
-    /* Slideshow container */
-    .Projects {
+}
+
+/* Slideshow container */
+.Projects {
     text-align: center;
     padding: 75px 0;
-    }
-    
-    .section-heading {
+}
+
+.section-heading {
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: bold;
-    }
-    
-    .section-heading span {
+}
+
+.section-heading span {
     color: crimson;
-    }
-    
-    .section-subheading {
+}
+
+.section-subheading {
     font-size: 18px;
     color: #ebe7e7;
     margin-bottom: 40px;
-    }
-    
-    /* Slider container */
-   
-.slider {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust as needed */
-    /* justify-content: center; Align slides horizontally to the center */
-    transition: transform 0.5s ease-in-out;
 }
 
-.slide {
-    flex: 0 0 33.33%; /* Display 3 slides per view */
-    padding: 0 10px;
-    text-align: center;
-    margin: 0 auto; /* Center the individual slides */
+/* Slider container */
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.card {
+    min-width: 300px;
+    margin: 0 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.card.slick-current {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.card.slick-blur {
+    filter: blur(3px);
+}
+
+/* CSS for 3D effect on slides */
+/* CSS for 3D effect on slides */
+.slick-slide {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.slick-current {
+    transform: scale(1.1);
+}
+
+.slick-blur {
+    filter: blur(5px);
+    transform: scale(0.9);
+}
+
+/* Other existing CSS rules */
+
+.project-info h2 {
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 .project-info p {
     text-align: justify;
-    margin: 0; /* Remove any default margins */
 }
 
-/* ... (other styles) */
+.slick-prev, .slick-next {
+    background: rgba(4, 61, 99, 0.7); /* Adjusted background color */
+    border-radius: 50%;
+    color: rgb(125, 5, 5);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
 
-.navigation {
-    text-align: center;
-    margin-top: 20px;
+.slick-prev:before, .slick-next:before {
+    content: '';
+}
+
+.slick-prev::after, .slick-next::after {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.75;
+    color: white;
+}
+
+.slick-prev::after {
+    content: '←';
+}
+
+.slick-next::after {
+    content: '→';
+}
+
+.slick-list {
+    overflow: visible;
 }
 
 button {
@@ -1091,20 +1145,21 @@ button {
     margin: 0 5px;
     font-size: 1.2rem;
     cursor: pointer;
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #333;
+    color: #fff;
     border: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease; /* Smooth transition for button color */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555; /* Change button background color on hover */
+    background-color: #555;
 }
+
 .Projects .project-info a {
-    color: blue; /* Set the color to blue for all project links */
+    color: blue;
 }
-/* CSS code */
+
 @keyframes multiColorBlink {
     0% {
         color: blue;
@@ -1125,36 +1180,34 @@ button:hover {
         color: blue;
     }
 }
+
 .github-link {
     animation: multiColorBlink 1s infinite;
     font-weight: bold;
-    font-size: 1.2em; /* Adjust the font size as needed */
+    font-size: 1.2em;
 }
-/* Update the margin-bottom for section-heading */
+
 .section-heading {
     font-size: 36px;
-    margin-bottom: 5px; /* Decrease the margin-bottom */
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* Update the margin-top for explore-projects */
 .explore-projects {
     text-align: center;
-    margin-top: 10px; /* Decrease the margin-top */
+    margin-top: 10px;
 }
-/* Adjust the width of cards for smaller screens */
+
 .card {
-    width: calc(50% - 20px); /* Adjust the width as needed */
+    width: calc(50% - 20px);
     margin-bottom: 20px;
 }
 
-/* Media query for screens smaller than 768px (typical for mobile devices) */
 @media screen and (max-width: 768px) {
     .card {
-        width: 100%; /* Make cards occupy full width */
+        width: 100%;
     }
 }
-
 
 
 

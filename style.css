@@ -321,6 +321,8 @@ section .title::after{
 }
 .home .home-content a{
     display: inline-block;
+ /* DOWNLOAD CV BUTTON */
+
     background: rgb(57, 59, 2);
     color: #1b0606;
     font-size: 25px;
@@ -371,11 +373,19 @@ section .title::after{
 .icons-3d .icon-card a:hover {
     transform: scale(1.1);
 }
-@media only screen and (max-width: 768px) {
+/* Additional styles to ensure responsiveness */
+@media screen and (max-width: 40px) {
     .icon-card {
-        flex: 0 0 calc(20% - 20px); /* Adjust icon card width for smaller screens */
+        flex-basis: calc(3.33% - 20px); /* Adjust card width for smaller screens */
     }
 }
+
+@media screen and (max-width: 40px) {
+    .icon-card {
+        flex-basis: calc(50% - 20px); /* Adjust card width for even smaller screens */
+    }
+}
+
 
 /* Define the multi-color blinking animation */
 @keyframes multiColorBlink {
@@ -392,7 +402,7 @@ section .title::after{
         color: orange;
     }
     100% {
-        color: rgb(133, 188, 16);
+        color: rgb(221, 222, 218);
     }
 }
 
@@ -400,6 +410,7 @@ section .title::after{
 .home-content a[href="https://drive.google.com/file/d/1AROGMYQmyi_grbR22bbVSTihkH-wAlJU/view"] {
     animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
 }
+
 
   /* Add this CSS for positioning the "Download CV" button */
   .download-cv {
@@ -974,9 +985,6 @@ body {
 
 
 
-
-
-
 /* Project section styling */
 .Projects .title::after {
     content: "Project Description";
@@ -1208,7 +1216,6 @@ button:hover {
         width: 100%;
     }
 }
-
 
 
 

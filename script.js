@@ -1,144 +1,3 @@
-// $(document).ready(function(){
-//     // Function to update the digital clock
-//     function updateClock() {
-//         let currentTime = new Date();
-//         let hours = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
-//         let minutes = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
-//         let seconds = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
-
-//         $("#hrs").text(hours);
-//         $("#min").text(minutes);
-//         $("#sec").text(seconds);
-//     }
-
-//     // Update the clock immediately and then every second
-//     updateClock();
-//     setInterval(updateClock, 1000);
-
-//     // Rest of your existing code...
-//     $(window).scroll(function(){
-//         // Sticky navbar on scroll script
-//         if(this.scrollY > 20){
-//             $('.navbar').addClass("sticky");
-//         }else{
-//             $('.navbar').removeClass("sticky");
-//         }
-        
-//         // Scroll-up button show/hide script
-//         if(this.scrollY > 500){
-//             $('.scroll-up-btn').addClass("show");
-//         }else{ 
-//             $('.scroll-up-btn').removeClass("show");
-//         }
-//     });
-
-//     // Slide-up script
-//     $('.scroll-up-btn').click(function(){
-//         $('html').animate({scrollTop: 0});
-//         // Removing smooth scroll on slide-up button click
-//         $('html').css("scrollBehavior", "auto");
-//     });
-
-//     $('.navbar .menu li a').click(function(){
-//         // Applying smooth scroll on menu items click
-//         $('html').css("scrollBehavior", "smooth");
-//     });
-
-//     // Toggle menu/navbar script
-//     $('.menu-btn').click(function(){
-//         $('.navbar .menu').toggleClass("active");
-//         $('.menu-btn i').toggleClass("active");
-//     });
-
-//     // Typing text animation script
-//     var typed = new Typed(".typing", {
-//         strings: ["Developer", "Blogger", "Designer", "Freelancer"],
-//         typeSpeed: 100,
-//         backSpeed: 60,
-//         loop: true
-//     });
-
-//     var typed = new Typed(".typing-2", {
-//         strings: ["Developer", "Blogger", "Designer", "Freelancer"],
-//         typeSpeed: 100,
-//         backSpeed: 60,
-//         loop: true
-//     });
-
-//     // Owl carousel script
-//     $('.carousel').owlCarousel({
-//         margin: 20,
-//         loop: true,
-//         autoplay: true,
-//         autoplayTimeOut: 2000,
-//         autoplayHoverPause: true,
-//         responsive: {
-//             0:{
-//                 items: 1,
-//                 nav: false
-//             },
-//             600:{
-//                 items: 2,
-//                 nav: false
-//             },
-//             1000:{
-//                 items: 3,
-//                 nav: false
-//             }
-//         }
-//     });
-
-//     // AJAX form submission
-//     $('#contact-form').submit(function(event) {
-//         event.preventDefault(); // Prevent default form submission
-
-//         var formData = $(this).serialize(); // Serialize form data
-//         $.ajax({
-//             type: 'POST',
-//             url: $(this).attr('action'),
-//             data: formData,
-//             dataType: 'json', // Expect JSON response
-//             success: function(response) {
-//                 // Handle success, e.g., show a success message
-//                 console.log(response.message); // Log the response message
-//             },
-//             error: function() {
-//                 // Handle error, e.g., show an error message
-//                 console.log('Error sending message');
-//             }
-//         });
-//     });
-// });
-
-
-
-
-
-
-
-
-// $(document).ready(function(){
-//     function updateClock() {
-//         let currentTime = new Date();
-//         let hours = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
-//         let minutes = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
-//         let seconds = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
-
-//         $("#hrs").text(hours);
-//         $("#min").text(minutes);
-//         $("#sec").text(seconds);
-//     }
-
-//     // Update the clock immediately and then every second
-//     updateClock();
-//     setInterval(updateClock, 1000);
-// });
-
-
-
-
-
-
 
 
 function toggleNav() {
@@ -217,7 +76,17 @@ function toggleNav() {
     // Scroll to the bottom of the chat box to show the latest messages
     chatBody.scrollTop = chatBody.scrollHeight;
   }
-  
+  // Add the new JavaScript code here
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+
+    menuBtn.addEventListener('click', function () {
+        menu.classList.toggle('active');
+    });
+});
+
+
   // Function to shuffle an array (Fisher-Yates shuffle algorithm)
   function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -554,4 +423,5 @@ function toggleNav() {
     var chatBody = document.getElementById("chat-body");
     chatBody.scrollTop = 0; // Scroll to the top instead of the bottom
   }
+  
   

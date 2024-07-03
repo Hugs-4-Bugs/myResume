@@ -1865,7 +1865,7 @@ footer span a:hover{
     padding: 8px 12px;
     margin: 6px;
     border-radius: 8px;
-    max-width: 70%; /* Limit message width */
+    max-width: 100%; /* Limit message width */
   }
   
   .message.you {

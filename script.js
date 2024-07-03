@@ -121,14 +121,14 @@ function toggleNav() {
   // Function to get predefined answer based on selected question
   function getPredefinedAnswer(index) {
     var predefinedAnswers = [
-      "I have expertise in Java, Spring Boot, SQl, Angular, HTML, CSS & Database.",
+      "I have expertise in Core Java, SQL, Data Structures, Spring Boot, Hibernate, MySQL, AWS CPE, Collection Framework, Exception Handling, Postman, Jira, Jenkins, Chef, Ansible, Git, DevOps, Agile Methodology, Kanban Board, RESTful API, JPA, Debugging, Authentication, AWS Deployment, Problem Solving, Software Development, Backend Development, Java Development, Angular, HTML, CSS, Database.",
       "I graduated in 2023 with a Bachelor of Engineering (B.E.) in Computer Science & Engineering from Visvesvaraya Technological University.",
-      "I have several years of experience working as a software engineer.",
+      "I have less 1 years of experience working as a software engineer.",
       "I speak English, Hindi, and Bhojpuri.",
-      "I am HackerRank Certified Software Engineer.",
-      "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application etc.",
-      "I am proficient with tools like Git, Docker, Android Studio, Jira, STS, IntelliJ IDEA, Eclipse, VS Code and Postman.",
-      "I am familiar with Java, Spring Boot, and Trading.",
+      "I am HackerRank Certified Software Engineer, Postman API Expert, Microsoft Azure AI Cloud",
+      "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application, AI-Text-Summarizer-Application, Angular-CRUD-Application, Bitcoin-Mining-Application, MultiFileUpload-Using-Spring-Boot-Application, Flight_Reservation_Project, Hotel-Management-project, Angular-weather-component, Angular-temperatureConverter, BMI-Calculator, BUDDY-A-face-recognition-based-voice-assistant etc.",
+      "I am proficient with tools like Git, Docker, Android Studio, Jira, Spring Tool Suite (STS), IntelliJ IDEA, Eclipse, VS Code, Postman.",
+      "I am familiar with Java, Spring Boot, Angular and Trading.",
       "I am experienced in RESTful APIs, HTML, CSS, AngularJS, Bootstrap, and JWT.",
       "I have worked with AWS cloud technologies.",
       "I am skilled in MySQL, SQL, and PostgreSQL.",
@@ -201,7 +201,7 @@ function toggleNav() {
   
   // Function to check if the question is a basic greeting or phrase
   function isBasicQuestion(question) {
-    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects"];
+    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects" "name", "from", "tell me about yourself"];
     return basicQuestions.includes(question.trim());
   }
   
@@ -229,7 +229,13 @@ function toggleNav() {
         return "I have no any Industrial experience.";
       case "projects":
       case "project":
-        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application etc.";
+        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application, AI-Text-Summarizer-Application, Angular-CRUD-Application, Bitcoin-Mining-Application, MultiFileUpload-Using-Spring-Boot-Application, Flight_Reservation_Project, Hotel-Management-project, Angular-weather-component, Angular-temperatureConverter, BMI-Calculator, BUDDY-A-face-recognition-based-voice-assistant etc.";
+      case  "name":
+            return "My self Prabhat Kumar.";
+      case  "from":
+            return "I am from Sasaram Bihar.";
+      case  "tell me about yourself":
+            return "I'm Prabhat Kumar, a 2023 graduate in Software Engineering. I have strong skills in Core Java, SQL, GitHub, Spring Boot, Hibernate, Data Structures, OOP, Exception Handling, MySQL, Angular, and AWS EC2. Proficient with tools like Git, Docker, Jira, and Postman. I've worked on projects in cryptocurrency prediction and hospital management systems, and interned at CodeSpeedy Technology, enhancing my Spring Boot development skills. I'm adaptable, positive, and ready to contribute to your company.";
       default:
         return "I'm sorry, I didn't understand that question.";
     }
@@ -291,19 +297,19 @@ function toggleNav() {
   
     switch (trimmedQuestion) {
       case "what skills do you have?":
-        return "I have expertise in Java, Spring Boot, SQl, Angular, HTML, CSS & Database.";
+        return "I have expertise in Core Java, SQL, Data Structures, Spring Boot, Hibernate, MySQL, AWS CPE, Collection Framework, Exception Handling, Postman, Jira, Jenkins, Chef, Ansible, Git, DevOps, Agile Methodology, Kanban Board, RESTful API, JPA, Debugging, Authentication, AWS Deployment, Problem Solving, Software Development, Backend Development, Java Development, Angular, HTML, CSS, Database.";
       case "what is your education?":
         return "I graduated in 2023 with a Bachelor of Engineering (B.E.) in Computer Science & Engineering from Visvesvaraya Technological University.";
       case "what is your experience?":
-        return "I don't have Industrial experiece.";
+        return "I have less 1 years of experience working as a software engineer.";
       case "what languages do you speak?":
         return "I speak English, Hindi, and Bhojpuri.";
       case "what certifications do you have?":
-        return "I am HackerRank certified Software Engineer.";
+        return "I am HackerRank certified Software Engineer, Postman API Expert, Microsoft Azure AI Cloud.";
       case "what projects have you worked on?":
-        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application etc.";
+        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application, AI-Text-Summarizer-Application, Angular-CRUD-Application, Bitcoin-Mining-Application, MultiFileUpload-Using-Spring-Boot-Application, Flight_Reservation_Project, Hotel-Management-project, Angular-weather-component, Angular-temperatureConverter, BMI-Calculator, BUDDY-A-face-recognition-based-voice-assistant etc.",
       case "what tools are you proficient with?":
-        return "I am proficient with tools like Git, Docker, Android Studio, Jira, STS, IntelliJ IDEA, Eclipse, VS Code and Postman.";
+        return "I am proficient with tools like Git, Docker, Android Studio, Jira, Spring Tool Suite (STS), IntelliJ IDEA, Eclipse, VS Code, Postman.";
       case "what programming languages are you familiar with?":
         return "I am familiar with Java, TypeScript, and Shell Scripting.";
       case "what web technologies are you experienced in?":

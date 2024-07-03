@@ -1766,9 +1766,76 @@ footer span a:hover{
 
 
 
-
-/* Chat button styles */
-.chat-button {
+/* Chat box styles */
+.chat-box {
+    display: none; /* Initially hide the chat box */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #f0dddd;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .chat-header {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .close {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  .close:hover {
+    color: #ffffff;
+  }
+  
+  .chat-body {
+    max-height: 300px; /* Limit chat height and enable scrolling */
+    overflow-y: auto;
+    padding: 10px;
+   
+  }
+  
+  .chat-footer {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 10px;
+  }
+  
+  #chat-input {
+    flex: 1; /* Take up remaining space */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  #chat-input:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  .chat-button {
     width: 60px; /* Adjust the width */
     height: 60px; /* Adjust the height */
     border-radius: 50%;
@@ -1786,216 +1853,41 @@ footer span a:hover{
     transition: all 0.3s ease; /* Add smooth transition */
   }
   
-  .chat-button:hover {
-    transform: scale(1.1); /* Increase size on hover */
-  }
-  
-  .chat-button img {
-    width: 140%; /* Adjust the size of the icon */
-    height: 60%; /* Adjust the size of the icon */
-  }
-  
-  /* Chat box styles */
-  .chat-box {
-    display: none;
-  position: fixed;
-  bottom: 15%;
-  width: 300px;
-  height: 350px; /* Max height to enable scrolling */
-  overflow-y: auto; /* Enable vertical scroll if needed */
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  right: 2%;
-  }
-  
-  .header {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    position: sticky;
-    top: 0; /* Stick the header to the top of the chat-box */
-    background-color: #fff; /* Optional: add background color */
-    z-index: 1; /* Ensure the header stays above other content */
-}
-  .chat-header {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-    z-index: 1;
-}
-
-  
-  .chat-header h2 {
-    position: fixed;
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .chat-body {
-    padding: 10px;
-    /* overflow-y: auto; */
-  }
-  .chat-container {
-    max-height: 300px; /* Adjust the max height as needed */
-    /* overflow-y: auto; Enable vertical scroll if needed */
-  }
-  
-  .close {
-    border-radius: 39%;
-    padding: 0.15em;
-    width: 40px;
+  .chat-icon {
+    width: 30px;
     height: 30px;
-    border: 2px solid blue;
-    color: blue;
-    /* position: right; */
-    text-align:right;
+    margin: 0 auto; /* add this to center the image horizontally */
+
   }
   
-  .close:hover {
-    border: 2px solid blue;
-    background-color: rgb(124, 12, 57);
-    color: #ffffff;
-  }
-  close:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    background-color: blue;
-    width: 2px;
-    left: 12px;
-    top: 5px;
-    bottom: 5px;
-    transform: rotate(45deg);
-  }
-  close:after {
-    content: " ";
-    position: absolute;
-    display: block;
-    background-color: blue;
-    height: 2px;
-    top:12px;
-    left: 5px;
-    right: 5px;
-    transform: rotate(45deg);
+  /* Messages */
+  .message {
+    padding: 8px 12px;
+    margin: 6px;
+    border-radius: 8px;
+    max-width: 70%; /* Limit message width */
   }
   
-  
-  .chat-footer {
-    /* display: block; */
-    position: fixed;
-    bottom: 7.25%;
-    width: 20.7%;
-    right: 2.12%;
-    box-sizing: border-box;
-    padding: 1%;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-  }
-  
-  .chat-footer input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    margin-right: 10px;
-    overflow: hidden; /* Prevent scrolling within the typing box */
-  }
-  
-  .chat-footer button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  
-  .chat-footer input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .chat-footer button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .chat-footer button:hover {
-    background-color: #45a049;
-  }
-  
-  /* .typing-indicator {
-    padding: 10px;
-    text-align: center;
-  } */
-  
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .container {
-      width: 90%; /* Adjust container width for smaller screens */
-    }
-  
-    .header-content {
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-  
-    nav {
-      margin-top: 20px; /* Add margin top for navigation links */
-    }
-  
-    .burger-menu {
-      display: block; /* Show burger menu on smaller screens */
-    }
-  
-    nav {
-      display: none; /* Hide navigation by default on smaller screens */
-      flex-direction: column;
-      background-color: #333; /* Dark background for navigation menu */
-      padding: 20px; /* Add padding to navigation menu */
-    }
-  
-    nav a {
-      margin-bottom: 10px; /* Add margin bottom for navigation links */
-    }
-  
-    nav.open {
-      display: flex; /* Show navigation when burger menu is clicked */
-    }
-  }
-  
-  /* Styling for user messages */
   .message.you {
-    color: rgb(151, 103, 6); /* Or any other color you desire */
-    text-align: right; /* Align user messages to the right */
+    background-color: #990f3b;
+    color: white;
+    align-self: flex-end;
   }
   
-  /* Styling for Tausif's messages */
   .message.prabhat {
-    color: green;
-    text-align: left; /* Align Tausif's messages to the left */
+    background-color: #086231;
+    color: white;
   }
   
-  /* Styling for typing indicator */
   .message.typing-prabhat {
-    color: #888; /* Light gray color */
+    color: #888;
+  }
+  
+  /* Typing indicator */
+  .typing-indicator {
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+    color: #888;
   }
   

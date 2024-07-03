@@ -389,7 +389,7 @@ section .title::after{
 
 /* Define the multi-color blinking animation */
 @keyframes multiColorBlink {
-    0% {
+    100% {
         color: blue;
     }
     25% {
@@ -723,6 +723,9 @@ p {
 
 
 /* skills section styling */
+.skills{
+    background: #b3a6a0;
+}
 .skills .title::after{
     content: "what i know";
 }
@@ -1268,18 +1271,20 @@ button:hover {
 /* Technology Section styles */
 .Technology {
     padding: 85px 0;
-    background-color: #de9b9b;
+    background-color: #3a5791;
     text-align: center;
 }
 
 .section-heading {
     font-size: 42px;
     margin-bottom: 20px;
+    color: #111010;
+
 }
 
 .Technology p {
     font-size: 16px;
-    color: #111010;
+    color: #d3dcd3;
     margin-bottom: 40px;
 }
 
@@ -1312,8 +1317,8 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 105, 180, 0.9);
-    color: #0b13a9;
+    background-color: rgba(87, 14, 50, 0.9);
+    color: #cbceef;
     opacity: 0;
     transition: opacity 0.3s;
     padding: 20px;
@@ -1399,30 +1404,42 @@ button:hover {
 
 
 /* contact section styling */
+.contact{
+    background: #c4c481;
+}
 .contact .title::after{
     content: "get in touch";
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
+    
 }
 .contact .contact-content .text{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #481257;
+
 }
 .contact .contact-content .left p{
     text-align: justify;
+    
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
+
 }
 .contact .contact-content .row{
     display: flex;
     height: 65px;
     align-items: center;
+    color: #008080;
+
+    
 }
 .contact .contact-content .row .info{
     margin-left: 30px;
+    
 }
 .contact .contact-content .row i{
     font-size: 25px;
@@ -1430,25 +1447,31 @@ button:hover {
 }
 .contact .contact-content .info .head{
     font-weight: 500;
+    
 }
 .contact .contact-content .info .sub-title{
     color: #333;
+    
 }
 .contact .right form .fields{
     display: flex;
+    
 }
 .contact .right form .field,
 .contact .right form .fields .field{
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
+    
 }
 .contact .right form .textarea{
     height: 80px;
     width: 100%;
+    
 }
 .contact .right form .name{
     margin-right: 10px;
+    
 }
 .contact .right form .field input,
 .contact .right form .textarea textarea{
@@ -1499,6 +1522,7 @@ footer{
     padding: 15px 23px;
     color: #fff;
     text-align: center;
+    
 }
 footer span a{
     color: crimson;
@@ -1630,6 +1654,12 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+
+
+
+
+
+
 
 
 

@@ -810,9 +810,10 @@
 
 
 
-
+                
                 <div class="column right">
                     <div class="text">Message Me</div>
+                    
                     <form action="https://formsubmit.co/prabhatkumarssm72@gmail.com" method="POST">
                     <!-- <form id="contact-form" action="send_message.php" method="post"> -->
                         <div class="fields">
@@ -829,6 +830,7 @@
                         <div class="field textarea">
                             <textarea name="message" required placeholder="Message"></textarea>
                         </div>
+                        
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <!-- <input type="hidden" name="_template" value="box"> -->
@@ -873,29 +875,27 @@
 
 
  <!-- Chat button -->
- <div class="container">
-    <button class="chat-button" onclick="toggleChat()">
-      <img src="chat.png" alt="Message" class="chat-icon">
-    </button>
-    <div class="chat-box" id="chat-box">
-        
-      <div class="chat-header">
-        <span class="close" onclick="toggleChat()">&times;</span>
-      </div>
-      <div class="chat-container">
-        <div class="chat-body" id="chat-body">
-          <!-- Predefined texts will be displayed here -->
-          <p>Welcome! Feel free to ask me anything.</p>
-        </div>
-        <div class="chat-footer">
-          <input type="text" id="chat-input" placeholder="Type your message...">
-          <button onclick="sendMessage()">Send</button>
-        </div>
-      </div>
-      <div class="typing-indicator" id="typing-indicator"></div>
+<div class="container">
+  <button class="chat-button" onclick="toggleChat()">
+    <img src="chat.png" alt="Message" class="chat-icon">
+  </button>
+  <div class="chat-box" id="chat-box">
+    <div class="chat-header">
+      <span class="close" onclick="toggleChat()">&times;</span>
+      <h4>Chat with Prabhat</h4>
     </div>
+    <div class="chat-container">
+      <div class="chat-body" id="chat-body">
+        <!-- Predefined texts will be displayed here -->
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+    <div class="typing-indicator" id="typing-indicator"></div>
   </div>
-
+</div>
       
     
     <!-- footer section start -->

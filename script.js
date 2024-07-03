@@ -201,7 +201,7 @@ function toggleNav() {
   
   // Function to check if the question is a basic greeting or phrase
   function isBasicQuestion(question) {
-    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects", "name", "from","where are you from", "tell me about yourself", "how are you"];
+    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects", "name", "from","where are you from", "tell me about yourself", "how are you", "who are you"];
     return basicQuestions.includes(question.trim());
   }
   
@@ -236,9 +236,11 @@ function toggleNav() {
       case  "from":
             return "I am from Sasaram Bihar.";
       case  "tell me about yourself":
-            return "I'm Prabhat Kumar, a 2023 graduate in Software Engineering. I have strong skills in Core Java, SQL, GitHub, Spring Boot, Hibernate, Data Structures, OOP, Exception Handling, MySQL, Angular, and AWS EC2. Proficient with tools like Git, Docker, Jira, and Postman. I've worked on projects in cryptocurrency prediction and hospital management systems, and interned at CodeSpeedy Technology, enhancing my Spring Boot development skills. I'm adaptable, positive, and ready to contribute to your company.";
+            return "I'm Prabhat Kumar, a 2023 college graduate with Bachelor degree in Computer Science Engineering. I have strong skills in Core Java, SQL, GitHub, Spring Boot, Hibernate, Data Structures, OOP, Exception Handling, MySQL, Angular, and AWS EC2. Proficient with tools like Git, Docker, Jira, and Postman. I've worked on projects in cryptocurrency prediction and hospital management systems, and interned at CodeSpeedy Technology, enhancing my Spring Boot development skills. I'm adaptable, positive, and ready to contribute to your company.";
       case  "how are you":
             return "I am  doing great, thank you. How are you?";
+      case  "who are you":
+            return "I'm Prabhat Kumar, a 2023 college graduate with Bachelor degree in Computer Science Engineering, with a strong foundation in Core Java, SQL, Spring Boot, and Hibernate. I've worked on notable projects like Employee Info, CryptoCurrency Price Prediction, Hospital Management Applications, and Bitcoin Mining App. Additionally, I'm skilled in Data Structures, Object-Oriented Programming, MySQL, AWS EC2, Angular, the Collection framework, Exception Handling, and Debugging.";
         default:
         return "I'm sorry, I didn't understand that question.";
     }

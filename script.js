@@ -1,5 +1,4 @@
 
-
 function toggleNav() {
     const nav = document.getElementById("nav");
     nav.classList.toggle("nav-open");
@@ -417,7 +416,18 @@ function toggleNav() {
     link.click();
   }
   
-  
+  const chatButton = document.querySelector('.chat-button');
+const chatBox = document.querySelector('.chat-box');
+
+chatButton.addEventListener('click', () => {
+  chatBox.style.display = 'block';
+  chatButton.style.visibility = 'hidden';
+});
+
+document.querySelector('.close').addEventListener('click', () => {
+  chatBox.style.display = 'none';
+  chatButton.style.visibility = 'visible';
+});
   // Function to scroll the chat box to the bottom
   function scrollChatToBottom() {
     var chatBody = document.getElementById("chat-body");

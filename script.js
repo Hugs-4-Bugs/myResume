@@ -201,7 +201,7 @@ function toggleNav() {
   
   // Function to check if the question is a basic greeting or phrase
   function isBasicQuestion(question) {
-    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects" "name", "from", "tell me about yourself"];
+    var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects", "name", "from", "tell me about yourself"];
     return basicQuestions.includes(question.trim());
   }
   
@@ -307,7 +307,7 @@ function toggleNav() {
       case "what certifications do you have?":
         return "I am HackerRank certified Software Engineer, Postman API Expert, Microsoft Azure AI Cloud.";
       case "what projects have you worked on?":
-        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application, AI-Text-Summarizer-Application, Angular-CRUD-Application, Bitcoin-Mining-Application, MultiFileUpload-Using-Spring-Boot-Application, Flight_Reservation_Project, Hotel-Management-project, Angular-weather-component, Angular-temperatureConverter, BMI-Calculator, BUDDY-A-face-recognition-based-voice-assistant etc.",
+        return "I have worked on projects like Employee Info, CryptoCurrency Price Prediction, Hospital-Managment-Applications, Bitcoin-Mining-App, Blog_Application, AI-Text-Summarizer-Application, Angular-CRUD-Application, Bitcoin-Mining-Application, MultiFileUpload-Using-Spring-Boot-Application, Flight_Reservation_Project, Hotel-Management-project, Angular-weather-component, Angular-temperatureConverter, BMI-Calculator, BUDDY-A-face-recognition-based-voice-assistant etc.";
       case "what tools are you proficient with?":
         return "I am proficient with tools like Git, Docker, Android Studio, Jira, Spring Tool Suite (STS), IntelliJ IDEA, Eclipse, VS Code, Postman.";
       case "what programming languages are you familiar with?":

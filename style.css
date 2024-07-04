@@ -419,7 +419,83 @@ section .title::after{
     right: 20px; /* Adjust as needed */
     margin-top: -30px; /* Half of the button's height */
 }
- 
+ /* Updated clock container styles */
+ .clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-right: 25px;
+    height: 12vh;
+    background: radial-gradient(circle, #1b2735, #090a0f); /* Galaxy background */
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+/* Clock container styles */
+.clock-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100; /* Ensure it's above other elements */
+    background: rgba(12, 1, 20, 0.8); /* Adjust background color and opacity */
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+/* Clock styles */
+.clock {
+    display: inline-block;
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Colon style */
+.colon {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  .am-pm {
+    font-size: 1.6rem;
+    color: #95e336;
+    margin-top: 6.9px;
+    margin-left: 10px; /* Adjust margin as needed */
+    margin-right: 10px;
+
+  }
+
+  .hour {
+    color: #e74c3c;
+  }
+  
+  .minute {
+    color: #2ecc71;
+  }
+  
+  .second {
+    color: #f39c12;
+  }
+
 
 
 

@@ -296,7 +296,7 @@
                     <h2>Bachelor of Engineering</h2>
                     <p>Visvesvaraya Technological University (VTU),Belagavi</p>
                     <p><span>Computer Science</span></p>
-                    <span>Percentage : 67%</span>
+                    <span>Percentage : 68%</span>
                 </div>
                 
             </div>
@@ -842,6 +842,21 @@
                 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--                 
                 <div class="column right">
                     <div class="text">Message me</div>
@@ -870,53 +885,88 @@
 
 
 
-                
+
+
+
+
+
+
+
+                <!-- Contact Me section  -->
                 <div class="column right">
                     <div class="text">Message Me</div>
                     
                     <form action="https://formsubmit.co/prabhatkumarssm72@gmail.com" method="POST">
-                    <!-- <form id="contact-form" action="send_message.php" method="post"> -->
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" name="name" required placeholder="Name">
-                            </div>
-                            <div class="field email">
-                                <input type="email" name="email" required placeholder="Email">
-                            </div>
+                      <div class="fields">
+                        <div class="field name">
+                          <input type="text" name="name" required placeholder="Name" id="name-input">
                         </div>
-                        <div class="field">
-                            <input type="text" name="subject" required placeholder="Subject">
+                        <div class="field email">
+                          <input type="email" name="email" required placeholder="Email" id="email-input">
                         </div>
-                        <div class="field textarea">
-                            <textarea name="message" required placeholder="Message"></textarea>
-                        </div>
+                      </div>
+                      <div class="field">
+                        <input type="text" name="subject" required placeholder="Subject" id="subject-input">
+                      </div>
+                      <div class="field textarea">
+                        <textarea name="message" required placeholder="Message" id="message-input"></textarea>
+                      </div>
+                      
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_template" value="table">
+                      <!-- <input type="hidden" name="_template" value="box"> -->
+                      <input type="hidden" name="_next" value="https://shorturl.at/huvBE">
+                      <div class="button-area">
+                        <button type="submit" id="submit-btn" disabled>No cheating 😀</button>
+                      </div>
+                    </form>
+                  </div>
+                  
+                  <script>
+                    const nameInput = document.getElementById('name-input');
+                    const emailInput = document.getElementById('email-input');
+                    const subjectInput = document.getElementById('subject-input');
+                    const messageInput = document.getElementById('message-input');
+                    const submitBtn = document.getElementById('submit-btn');
+                  
+                    const validateForm = () => {
+                      const nameValue = nameInput.value;
+                      const emailValue = emailInput.value;
+                      const subjectValue = subjectInput.value;
+                      const messageValue = messageInput.value;
+                      const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/;
+                  
+                      if (nameValue && emailValue && subjectValue && messageValue && emailRegex.test(emailValue)) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
                         
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <!-- <input type="hidden" name="_template" value="box"> -->
-                        <input type="hidden" name="_next" value="https://shorturl.at/huvBE">
-                        <div class="button-area">
-                            <button type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-
-                
-
-
-
-                <!-- <div class="form">
-                    <h1>Contact Us</h1>
-                    <form action="https://formsubmit.co/prabhatkumarssm72@gmail.com" method="POST">
-                    <input type="text" name="name" required placeholder="Name">
-                    <input type="email" name="email" required placeholder="Email">
-                    <input type="text" name="subject" required placeholder="Subject">
-                    <textarea name="msg" required placeholder="Message"></textarea>
-                    <button type="submit">Submit</button> I
-                    </form>
-                </div> -->
-
-
+                      } else {
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'No cheating 😀';
+                      }
+                    };
+                  
+                    nameInput.addEventListener('input', validateForm);
+                    emailInput.addEventListener('input', validateForm);
+                    subjectInput.addEventListener('input', validateForm);
+                    messageInput.addEventListener('input', validateForm);
+                  
+                    submitBtn.addEventListener('mouseover', () => {
+                      if (!emailInput.value.match(/^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/)) {
+                        submitBtn.style.position = 'relative';
+                        submitBtn.style.left = `${Math.random() * 280}px`;
+                        submitBtn.style.right = `${Math.random() * 190}px`;
+                        submitBtn.style.top = `${Math.random() * 130}px`;
+                        submitBtn.style.bottom = `${Math.random() * 140}px`;
+                      }
+                    });
+                  
+                    emailInput.addEventListener('focus', () => {
+                      submitBtn.style.position = 'static';
+                      submitBtn.style.left = '0px';
+                      submitBtn.style.top = '0px';
+                    });
+                  </script>
             </div>
         </div>
     </section>

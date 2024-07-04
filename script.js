@@ -201,7 +201,7 @@ function toggleNav() {
   
   // Function to check if the question is a basic greeting or phrase
  function isBasicQuestion(question) {
-  var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects", "name", "from","where are you from", "tell me about yourself", "how are you", "who are you", "tell me something about prabhat", "who is Prabhat", "who is prabhat", "tell me more about prabhat", "tell me more about Prabhat", "tell me something about Prabhat"];
+  var basicQuestions = ["hi", "hello", "good morning", "good afternoon", "good evening", "thank you","education","skill","skills","experience","project","projects", "name", "from","where are you from", "tell me about yourself", "how are you", "who are you", "tell me something about prabhat", "who is Prabhat", "who is prabhat", "tell me more about prabhat", "tell me more about Prabhat", "tell me something about Prabhat", "tell me about prabhat", "tell me about Prabhat"];
   return basicQuestions.includes(question.trim());
 }
 
@@ -247,6 +247,8 @@ function getBasicResponse(question) {
     case "tell me more about prabhat":
     case "tell me something about Prabhat":
     case "tell me more about Prabhat":
+    case "tell me about prabhat":
+    case  "tell me about Prabhat":
           return "Prabhat Kumar is a 2023 college graduate with Bachelor degree in Computer Science Engineering, with a strong foundation in Core Java, SQL, Spring Boot, and Hibernate. I've worked on notable projects like Employee Info, CryptoCurrency Price Prediction, Hospital Management Applications, and Bitcoin Mining App. Additionally, I'm skilled in Data Structures, Object-Oriented Programming, MySQL, AWS EC2, Angular, the Collection framework, Exception Handling, and Debugging.";
       default:
       return "I'm sorry, I didn't understand that question.";

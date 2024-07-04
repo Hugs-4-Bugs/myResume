@@ -539,6 +539,9 @@ section .title::after{
 
 
 /* about section styling */
+.about{
+    background-color: #b577b5;
+}
 .about .title::after{
     content: "who i am";
 }

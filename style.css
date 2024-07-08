@@ -568,6 +568,8 @@ section .title::after{
 }
 .about .about-content .right p{
     text-align: justify;
+    color: rgba(255, 255, 255, 0.831);
+
 }
 .about .about-content .right a{
     display: inline-block;
@@ -585,6 +587,7 @@ section .title::after{
 .about .about-content .right a:hover{
     color: crimson;
     background: none;
+    
 }
 
 
@@ -629,8 +632,11 @@ section .title::after{
     content: "what i provide";
 }
 .services .serv-content .card{
+    box-shadow: 1px 1px 20px rgb(5, 221, 9);
+    transform: rotate(0deg) scale(1) translateY(10px);
+    transition: 0.5s all ease;
     width: calc(28% - 20px);
-    background: #222;
+    background: #222222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -638,20 +644,29 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
+     /* transform: scale(1.1); */
+     /* transform: rotateX(360deg); */
+     /* transform: translateY(-100px); */
+     /* transform: translateY(100px); */
+     transform: rotate(360deg);
+     /* transform: scaleX(1.5); */
+     transition: 2s;
     background: crimson;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover .box{
-    transform: scale(1.05);
+    transform: (1.05);
 }
 .services .serv-content .card i{
+    
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
+    
     color: #fff;
 }
 .services .serv-content .card .text{
@@ -709,7 +724,7 @@ body {
 
 /* Education Section styles */
 .Education {
-    background: #9c8adc;
+    background: #c07d4d;
     height: 100vh;
     border-radius: 6px;
     padding: 60px 35px;
@@ -733,23 +748,41 @@ p {
 }
 
 /* Card styles */
-.card-wrapper {
+.card-wrapper{
+    
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .card {
+    perspective: 1000px;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
     background-color: #e9e9e9;
     /* width: calc(80% - 20px); */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
     width: 300px;
 }
+.Education .card-wrapper .card:hover{
+     /* transform: scale(1.1); */
+     transform: rotateX(360deg);
+     /* transform: translateY(-100px); */
+     /* transform: translateY(100px); */
+     /* transform: rotate(360deg); */
+     /* transform: scaleX(1.5); */
+     transition: 2s;
+}
+.Education .card-wrapper .card{
+    perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: 0 6px 12px rgb(14, 11, 201);
+  
 
+}
 .card img {
+    rotate: (-50% -50%);
     max-width: 90%;
     height: auto;
     margin-bottom: 15px;
@@ -758,6 +791,7 @@ p {
 .card h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: rgb(24, 214, 24);
 }
 
 .card p {
@@ -767,7 +801,7 @@ p {
 
 .card span {
     display: block;
-    color: #3498db;
+    color: #7d0c89;
     font-size: 18px;
 }
 
@@ -1191,6 +1225,7 @@ body {
 .project-info h2 {
     font-size: 20px;
     margin: 10px 0;
+    color: green;
 }
 
 .project-info p {
@@ -1375,13 +1410,19 @@ button:hover {
 }
 
 .card {
+    perspective: 200px;
+    transition: box-shadow 3s ease-in-out;
+    /* transform: translate(5deg); */
     position: relative;
     margin: 20px;
     overflow: hidden;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(137, 36, 36, 0.1);
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 3s;
+}
+.Technology .card-wrapper .card{
+    box-shadow: 0 8px 13px rgb(223, 24, 6);
+    
 }
 
 .card img {
@@ -1396,7 +1437,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(87, 14, 50, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     color: #cbceef;
     opacity: 0;
     transition: opacity 0.3s;
@@ -1414,6 +1455,13 @@ button:hover {
 }
 
 .card:hover .overlay {
+    /* transform: scale(1.1); */
+    transform: rotateX(360deg);
+    /* transform: translateY(-100px); */
+    /* transform: translateY(100px); */
+    /* transform: rotate(360deg); */
+    /* transform: scaleX(1.5); */
+    transition: 2s;
     opacity: 1;
 }
 
@@ -1421,6 +1469,7 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: red;
 }
 
 .overlay a {
@@ -1485,6 +1534,7 @@ button:hover {
 /* contact section styling */
 .contact{
     background: #c4c481;
+    
 }
 .contact .title::after{
     content: "get in touch";
@@ -1768,6 +1818,12 @@ footer span a:hover{
 
 
 
+
+
+
+
+
+
 /* Styles for scroll indicator */
 .scroll-indicator {
     position: fixed;
@@ -1924,19 +1980,20 @@ footer span a:hover{
   }
   
   .chat-footer {
+    box-shadow: 1px 1px 10px blue;
     display: flex;
     align-items: center;
     background-color: #e0e0e0;
     padding: 10px;
   }
-  
+
   #chat-input {
     flex: 1; /* Take up remaining space */
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin-right: 10px;
+    margin-right: 8px;
   }
   
   #chat-input:focus {

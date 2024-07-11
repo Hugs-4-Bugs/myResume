@@ -349,9 +349,8 @@ section .title::after{
 }
 
 .icon-card {
-    flex: 0 0 calc(10% - 20px); /* Adjust the width of each icon card */
-    /* margin: 10px; Add some spacing between icon cards */
-    margin-right: 10px; /* Adjust spacing between cards */
+    flex: 0 0 calc(10% - 20px);
+    margin-right: 7px;
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
 }
@@ -361,7 +360,7 @@ section .title::after{
 }
 
 .icons-3d .icon-card a {
-    margin-top: 400px; /* Adjust as needed */
+    margin-top: 400px;
     display: block;
     text-decoration: none;
     color: #1e0661;
@@ -373,19 +372,28 @@ section .title::after{
 .icons-3d .icon-card a:hover {
     transform: scale(1.1);
 }
+
 /* Additional styles to ensure responsiveness */
-@media screen and (max-width: 40px) {
-    .icon-card {
-        flex-basis: calc(3.33% - 20px); /* Adjust card width for smaller screens */
+@media screen and (max-width: 768px) { /* Tablet size */
+    .icons-3d .icon-card a {
+        font-size: 24px; /* Reduce font size */
+        margin-top: 350px; /* Reduce margin-top */
     }
 }
 
-@media screen and (max-width: 40px) {
-    .icon-card {
-        flex-basis: calc(50% - 20px); /* Adjust card width for even smaller screens */
+@media screen and (max-width: 480px) { /* Mobile size */
+    .icons-3d .icon-card a {
+        font-size: 20px; /* Reduce font size */
+        margin-top: 300px; /* Reduce margin-top */
     }
 }
 
+@media screen and (max-width: 320px) { /* Small mobile size */
+    .icons-3d .icon-card a {
+        font-size: 16px; /* Reduce font size */
+        margin-top: 250px; /* Reduce margin-top */
+    }
+}
 
 /* Define the multi-color blinking animation */
 @keyframes multiColorBlink {

@@ -348,9 +348,16 @@ section .title::after{
     transform: translateY(-50%);
 }
 
-.icon-card {
+/* .icon-card {
     flex: 0 0 calc(10% - 20px);
     margin-right: 7px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+} */
+
+.icon-card {
+    flex: 0 0 calc(5% - 10px);
+    margin-right: 1px;
     transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
 }

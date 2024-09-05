@@ -782,8 +782,9 @@ p {
     width: 300px;
 }
 .Education .card-wrapper .card:hover{
-     /* transform: scale(1.1); */
-     transform: rotateX(360deg);
+    
+     transform: scale(1.2);
+     /* transform: rotateX(360deg); */
      /* transform: translateY(-100px); */
      /* transform: translateY(100px); */
      /* transform: rotate(360deg); */

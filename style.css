@@ -1473,14 +1473,17 @@ button:hover {
 
 .card:hover .overlay {
     /* transform: scale(1.1); */
-    transform: rotateX(360deg);
+    /* transform: rotateX(360deg); */
     /* transform: translateY(-100px); */
     /* transform: translateY(100px); */
     /* transform: rotate(360deg); */
-    /* transform: scaleX(1.5); */
+    transform: scaleX(1.2);
+    transition: transform 0.4s ease-in-out, background-color 0.3s ease-in-out;
+    transform: scaleY(1.07); /* Shrink from both sides to the center */
     transition: 2s;
     opacity: 1;
 }
+
 
 .overlay span {
     font-size: 18px;

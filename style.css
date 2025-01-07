@@ -423,7 +423,7 @@ section .title::after{
 }
 
 /* Apply the animation to the "Download CV" link */
-.home-content a[href="https://drive.google.com/file/d/1GjVCyKkqxnv762AptC0DspqUfQSu5Ip6/view"] {
+.home-content a[href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view"] {
     animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
 }
 

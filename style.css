@@ -322,10 +322,13 @@ section .title::after{
 }
 .home .home-content a{
     display: inline-block;
+
+
+    
  /* DOWNLOAD CV BUTTON */
 
     background: rgb(57, 59, 2);
-    color: #1b0606;
+    color: #e22e2e;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -424,7 +427,7 @@ section .title::after{
 
 /* Apply the animation to the "Download CV" link */
 .home-content a[href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view"] {
-    animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */
+/*     animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */ */
 }
 
 

@@ -1,7 +1,6 @@
 /*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 *{
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -304,7 +303,7 @@ section .title::after{
 .home .max-width .row{
   margin-right: 0;
 }
-.home .home-content .text-1{
+/* .home .home-content .text-1{
     font-size: 27px;
 }
 .home .home-content .text-2{
@@ -317,14 +316,60 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: rgb(203, 147, 158);
+    color: rgb(73, 2, 17);
     font-weight: 500;
 }
+.home .home-content .text-4 span{
+    color: rgb(8, 6, 74);
+    font-weight: 400;
+} */
+
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3, .home .home-content .text-4 {
+    font-size: 40px;
+    margin: 5px 0;
+    white-space: nowrap;  /* Ensure the text stays on a single line until fully typed */
+}
+
+.home .home-content .text-3 span {
+    color: rgb(73, 2, 17); /* Blue color */
+    font-weight: 500;
+}
+
+.home .home-content .text-4 {
+    color: rgb(8, 6, 74); /* Dark color for second text */
+    font-weight: 400;
+    font-size: 30px; /* Smaller font size for the longer text */
+}
+
+
+.typing {
+    display: inline-block;
+    color: #084c78; /* Blue color for typing effect */
+}
+
+
+
+
+
+
+
+
+
+
+
 .home .home-content a{
     display: inline-block;
-
-
-    
  /* DOWNLOAD CV BUTTON */
 
     background: rgb(57, 59, 2);
@@ -348,16 +393,9 @@ section .title::after{
     justify-content: flex-end; /* Align icons to the right */
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 30px;
     transform: translateY(-50%);
 }
-
-/* .icon-card {
-    flex: 0 0 calc(10% - 20px);
-    margin-right: 7px;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease-in-out;
-} */
 
 .icon-card {
     flex: 0 0 calc(5% - 10px);
@@ -424,10 +462,9 @@ section .title::after{
         color: rgb(221, 222, 218);
     }
 }
-
 /* Apply the animation to the "Download CV" link */
 .home-content a[href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view"] {
-/*     animation: multiColorBlink 1s infinite; /* Blink effect with a duration of 1 second, infinite repetition */ */
+    /* animation: multiColorBlink 1s infinite; Blink effect with a duration of 1 second, infinite repetition */
 }
 
 
@@ -667,7 +704,7 @@ section .title::after{
      /* transform: rotateX(360deg); */
      /* transform: translateY(-100px); */
      /* transform: translateY(100px); */
-/*      transform: rotate(360deg); */
+     /* transform: rotate(360deg); */
      /* transform: scaleX(1.5); */
      transition: 2s;
     background: crimson;
@@ -785,14 +822,14 @@ p {
     width: 300px;
 }
 .Education .card-wrapper .card:hover{
-    
-     transform: scale(1.2);
+    transform: scale(1.2);
+     /* transform: scale(1.1); */
      /* transform: rotateX(360deg); */
      /* transform: translateY(-100px); */
      /* transform: translateY(100px); */
      /* transform: rotate(360deg); */
      /* transform: scaleX(1.5); */
-     transition: 2s;
+     transition: 2.5s;
 }
 .Education .card-wrapper .card{
     perspective: 1000px;
@@ -1486,7 +1523,6 @@ button:hover {
     transition: 2s;
     opacity: 1;
 }
-
 
 .overlay span {
     font-size: 18px;

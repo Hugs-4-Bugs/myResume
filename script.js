@@ -537,3 +537,31 @@ function scrollChatToBottom() {
 }
 
 
+
+
+// read more and read less for right column with %age skills bar
+document.getElementById("toggle-skills").addEventListener("click", function(event) {
+  event.preventDefault();
+  var extraSkills = document.getElementById("extraSkills");
+  if (extraSkills.style.display === "none") {
+      extraSkills.style.display = "block";
+      this.textContent = "Read less";
+  } else {
+      extraSkills.style.display = "none";
+      this.textContent = "Read more";
+  }
+});
+
+// read more and read less for left column with text
+document.getElementById("toggle-text-left").addEventListener("click", function(event) {
+  event.preventDefault();
+  var moreText = document.getElementById("more-text-left");
+  if (moreText.style.display === "none") {
+      moreText.style.display = "inline";
+      this.textContent = "Read less";
+  } else {
+      moreText.style.display = "none";
+      this.textContent = "Read more";
+  }
+});
+

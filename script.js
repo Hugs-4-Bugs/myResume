@@ -455,14 +455,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const typing1 = document.getElementById('typing1');
   const typing2 = document.getElementById('typing2');
 
-  const text1 = "Java Developer";
+   const text1 = "Java Developer";
   // const text2 = "and the Founder of QuantumCrypto, NebulaFusion, and QuantumFusion Solutions";
-  const text2 = "and the Founder of QuantumCrypto, and NebulaFusion";
+  const text2 = "and the Founder of QuantumFusion Solutions, and NebulaFusion";
 
   let index1 = 0;
   let index2 = 0;
   let typing1Active = true; // Flag to determine which text is being typed
-  const companyNames = ["QuantumCrypto", "NebulaFusion", "QuantumFusion Solutions"];
+  const companyNames = ["QuantumFusion Solutions", "NebulaFusion", "QuantumFusion Solutions"];
   const companyColors = ["#333333", "#333333", "#333333"]; // Different colors for each company
 
   function typeWriter(element, text, index, speed, callback) {

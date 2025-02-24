@@ -910,6 +910,8 @@ p {
 .skills .skills-content .left p{
     text-align: justify;
 }
+
+/* read more button styling for left side */
 .skills .skills-content .left a{
     display: inline-block;
     background: crimson;
@@ -922,6 +924,22 @@ p {
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
+
+/* read more button styling for right side with skill % bar */
+.skills .skills-content .right a{
+    display: inline-block;
+    background: rgb(52, 9, 134);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+
 .skills .skills-content .left a:hover{
     color: crimson;
     background: none;
@@ -1001,6 +1019,49 @@ p {
 .skills-content .right .AndroidStudio::before{
     width: 60%;
 }
+.skills-content .right .SpringFramework::before {
+    width: 70%;
+}
+.skills-content .right .JPA::before {
+    width: 70%;
+}
+.skills-content .right .AWS::before {
+    width: 70%;
+}
+.skills-content .right .DevOps::before {
+    width: 50%;
+}
+.skills-content .right .AI::before {
+    width: 60%;
+}
+.skills-content .right .API::before {
+    width: 80%;
+}
+.skills-content .right .DockerKubernetes::before {
+    width: 50%;
+}
+.skills-content .right .Trading::before {
+    width: 100%;
+}
+.skills-content .right .ML::before {
+    width: 60%;
+}
+.skills-content .right .CloudSecurity::before {
+    width: 70%;
+}
+.skills-content .right .Microservices::before {
+    width: 60%;
+}
+.skills-content .right .ReactJS::before {
+    width: 40%;
+}
+.skills-content .right .GraphQL::before {
+    width: 50%;
+}
+.skills-content .right .HTML::before {
+    width: 50%;
+}
+
 
 
 

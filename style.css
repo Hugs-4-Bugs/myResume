@@ -26,6 +26,16 @@ html{
 
 
 
+/* for mobile */
+@media (max-width: 768px) {
+    .bars {
+        flex-direction: column; /* Ensure vertical stacking */
+        width: 100%; /* Full width on mobile */
+    }
+    .info span {
+        font-size: 14px; /* Smaller text for better fit */
+    }
+}
 
 
 

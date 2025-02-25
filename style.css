@@ -2110,7 +2110,6 @@ footer span a:hover{
 
 
 
-
 /* Chat box styles */
 .chat-box {
     display: none; /* Initially hide the chat box */
@@ -2118,13 +2117,15 @@ footer span a:hover{
     bottom: 20px;
     right: 20px;
     width: 300px;
+    height: 400px; /* Set a fixed height */
     background-color: #f0dddd;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     z-index: 1000; /* Ensure it's above other content */
-  }
+    overflow: hidden; /* Prevent resizing issues */
+}
   
   .chat-header {
     background-color: #000000;
@@ -2153,11 +2154,16 @@ footer span a:hover{
   }
   
   .chat-body {
-    max-height: 300px; /* Limit chat height and enable scrolling */
+    flex-grow: 1; /* Takes up available space */
+    max-height: calc(100% - 90px); /* Ensure chat body doesn't shrink */
     overflow-y: auto;
     padding: 10px;
-   
-  }
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure it takes the full height */
+}
   
   .chat-footer {
     box-shadow: 1px 1px 10px blue;
@@ -2180,6 +2186,8 @@ footer span a:hover{
     outline: none;
     border-color: #4caf50;
   }
+
+
   
   .chat-button {
     width: 60px; /* Adjust the width */
@@ -2236,4 +2244,3 @@ footer span a:hover{
     font-style: italic;
     color: #888;
   }
-  

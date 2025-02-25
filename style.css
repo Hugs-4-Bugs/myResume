@@ -2162,7 +2162,7 @@ footer span a:hover{
 .chat-container {
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure it takes the full height */
+    height: 99%; /* Ensure it takes the full height */
 }
   
   .chat-footer {

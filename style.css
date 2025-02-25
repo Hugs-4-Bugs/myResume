@@ -938,7 +938,7 @@ p {
 /* read more button styling for left side */
 .skills .skills-content .left a{
     display: inline-block;
-    background: crimson;
+    background: rgb(35, 9, 155);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -1026,19 +1026,19 @@ p {
     width: 60%;
 }
 .skills-content .right .Springboot::before{
-    width: 40%;
+    width: 70%;
 }
 .skills-content .right .Hibernate::before{
-    width: 50%;
+    width: 65%;
 }
 .skills-content .right .Maven::before{
-    width: 40%;
+    width: 70%;
 }
 .skills-content .right .Servlet::before{
     width: 50%;
 }
 .skills-content .right .API::before{
-    width: 50%;
+    width: 70%;
 }
 .skills-content .right .JavaBackend::before{
     width: 70%;
@@ -1072,9 +1072,6 @@ p {
 }
 .skills-content .right .AI::before {
     width: 60%;
-}
-.skills-content .right .API::before {
-    width: 80%;
 }
 .skills-content .right .DockerKubernetes::before {
     width: 50%;
@@ -2110,6 +2107,7 @@ footer span a:hover{
 
 
 
+
 /* Chat box styles */
 .chat-box {
     display: none; /* Initially hide the chat box */
@@ -2163,15 +2161,21 @@ footer span a:hover{
     display: flex;
     flex-direction: column;
     height: 99%; /* Ensure it takes the full height */
+
 }
   
-  .chat-footer {
+.chat-footer {
     box-shadow: 1px 1px 10px blue;
     display: flex;
     align-items: center;
     background-color: #e0e0e0;
     padding: 10px;
-  }
+    height: 50px; /* Ensure consistent height */
+    box-sizing: border-box;
+    
+
+}
+
 
   #chat-input {
     flex: 1; /* Take up remaining space */
@@ -2244,3 +2248,4 @@ footer span a:hover{
     font-style: italic;
     color: #888;
   }
+  

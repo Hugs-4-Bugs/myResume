@@ -1,5 +1,6 @@
 /*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -625,6 +626,12 @@ section .title::after{
 .about .about-content .right p{
     text-align: justify;
     color: rgba(255, 255, 255, 0.831);
+    text-shadow:  
+    0px 5px 0px #8d5b8d,   /* Deep solid shadow for strong hanging effect */
+    0px 10px 4px rgba(0, 0, 0, 0.8),  /* Soft depth shadow */
+    0px 15px 8px rgba(0, 0, 0, 0.3);  /* Gentle fade for realism */
+
+    
 
 }
 .about .about-content .right a{
@@ -675,8 +682,14 @@ section .title::after{
 
 /* services section styling */
 .services, .teams{
-    color:#fff;
+    color:#efe9e0;
     background: #111;
+    text-shadow:  
+    1px 3.5px 3px #b8aca0,  /* Solid shadow below for the "hanging" illusion */  
+    3px 17px 7px rgba(93, 77, 77, 0.4),  /* Softer shadow for depth */  
+    3px 25px 9px rgba(0, 0, 0, 2);  /* Fading shadow to extend the effect */
+
+
 }
 .services .title::before,
 .teams .title::before{
@@ -707,7 +720,7 @@ section .title::after{
      /* transform: rotate(360deg); */
      /* transform: scaleX(1.5); */
      transition: 2s;
-    background: crimson;
+    background: rgb(135, 6, 32);
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -716,14 +729,13 @@ section .title::after{
     transform: (1.05);
 }
 .services .serv-content .card i{
-    
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
     
-    color: #fff;
+    color: #0c1f6c;
 }
 .services .serv-content .card .text{
     font-size: 25px;
@@ -741,7 +753,7 @@ section .title::after{
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    color: #333;
+    color: #333333;
 }
 
 
@@ -787,6 +799,10 @@ body {
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease;
+    text-shadow:  
+    1px 3.5px 3px #c5b8ac,  /* Solid shadow below for the "hanging" illusion */ 
+    3px 17px 7px rgba(59, 80, 58, 0.9),  /* Softer shadow for depth */   
+    6px 50px 18px rgb(146, 138, 138);  /* Fading shadow to extend the effect */
 }
 
 .Education-heading {
@@ -848,7 +864,7 @@ p {
 .card h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: rgb(24, 214, 24);
+    color: rgb(8, 73, 8);
 }
 
 .card p {
@@ -890,12 +906,18 @@ p {
 
 
 
-
-
 /* skills section styling */
 .skills{
     background: #b3a6a0;
+    font-family: Arial, sans-serif;
+    color: initial;
+    text-shadow: 2px 12px 18px rgba(0, 0, 0, 0.5),  
+             -2px -2px 4px rgba(255, 255, 255, 0.8);
+
+             
+
 }
+
 .skills .title::after{
     content: "what i know";
 }
@@ -911,6 +933,8 @@ p {
     text-align: justify;
 }
 
+
+
 /* read more button styling for left side */
 .skills .skills-content .left a{
     display: inline-block;
@@ -925,6 +949,8 @@ p {
     transition: all 0.3s ease;
 }
 
+
+
 /* read more button styling for right side with skill % bar */
 .skills .skills-content .right a{
     display: inline-block;
@@ -938,6 +964,19 @@ p {
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
+
+.handwritten {
+    font-family: 'Caveat', 'Patrick Hand', 'Shadows Into Light', cursive;
+    font-size: 41px !important; /* Force the size */
+    font-weight: bold;
+    color: #efe9e0;
+    text-shadow: 10px 10px 18px rgb(40, 26, 26);
+    display: inline-block; /* Ensure it's not constrained by inline properties */
+    width: 100%; /* Allow it to take full width */
+    text-align: center; /* Optional: Center the text */
+    line-height: 1.2; /* Adjust line height if needed */
+}
+
 
 
 .skills .skills-content .left a:hover{
@@ -1061,6 +1100,13 @@ p {
 .skills-content .right .HTML::before {
     width: 50%;
 }
+
+
+
+
+
+
+
 
 
 
@@ -1226,6 +1272,10 @@ body {
 .Projects {
     height: 100vh;
     background-color: rgb(201, 182, 32);
+    color: currentColor;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 1.8),  
+             -4px -4px 10px rgba(255, 255, 255, 3);
+
 }
 .Projects .carousel .slider {
     background: #0a0453;
@@ -1244,7 +1294,9 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    
 }
+
 .Projects .carousel .slider:hover .box {
     transform: scale(1.05);
 }
@@ -1252,6 +1304,8 @@ body {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    text-shadow: #228B22;
+
 }
 .Projects .carousel .slider img {
     height: 150px;
@@ -1273,8 +1327,9 @@ body {
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #4a6da9;
+    color: #333333;
+
 }
 
 /* Slideshow container */
@@ -1308,10 +1363,11 @@ body {
 .card {
     min-width: 300px;
     margin: 0 10px;
-    background-color: white;
+    background-color: #d1c8b9;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(6, 0, 0, 0.1);
     transition: transform 0.3s, filter 0.3s;
+    
 }
 
 .card.slick-current {
@@ -1654,6 +1710,10 @@ button:hover {
 /* contact section styling */
 .contact{
     background: #c4c481;
+    color: currentColor;
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 3),  
+             -3px -3px 8px rgba(255, 255, 255, 2);
+
     
 }
 .contact .title::after{

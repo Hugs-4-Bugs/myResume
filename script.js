@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const typing1 = document.getElementById('typing1');
   const typing2 = document.getElementById('typing2');
 
-   const text1 = "Java Developer";
+  const text1 = "Java Developer";
   // const text2 = "and the Founder of QuantumCrypto, NebulaFusion, and QuantumFusion Solutions";
   const text2 = "and the Founder of QuantumFusion Solutions, and NebulaFusion";
 
@@ -537,8 +537,6 @@ function scrollChatToBottom() {
 }
 
 
-
-
 // read more and read less for right column with %age skills bar
 document.getElementById("toggle-skills").addEventListener("click", function(event) {
   event.preventDefault();
@@ -564,4 +562,3 @@ document.getElementById("toggle-text-left").addEventListener("click", function(e
       this.textContent = "Read more";
   }
 });
-

@@ -464,6 +464,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let typing1Active = true; // Flag to determine which text is being typed
   const companyNames = ["QuantumFusion Solutions", "NebulaFusion", "QuantumFusion Solutions"];
   const companyColors = ["#333333", "#333333", "#333333"]; // Different colors for each company
+  const companyLinks = [
+    "https://www.quantumfusionsolutions.com",  // Replace with your link
+    "https://www.nebulafusion.com",  // Replace with your link
+    "https://www.quantumfusionsolutions.com"  // Replace with your link
+  ];
 
   function typeWriter(element, text, index, speed, callback) {
       if (index < text.length) {
@@ -475,6 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
               if (text.slice(index).startsWith(companyNames[i])) {
                   // Highlight the company name immediately
                   highlight = `<span class="highlight" style="color: ${companyColors[i]}; font-weight: bold;">${companyNames[i]}</span>`;
+                  // highlight = `<a href="${companyLinks[i]}" target="_blank" style="color: inherit; text-decoration: none; font-weight: bold;">${companyNames[i]}</a>`;
                   // Insert the highlighted text and skip the company name's length
                   element.innerHTML += highlight;
                   index += companyNames[i].length - 1; // Skip over the company name
@@ -537,6 +543,10 @@ function scrollChatToBottom() {
 }
 
 
+
+
+
+
 // read more and read less for right column with %age skills bar
 document.getElementById("toggle-skills").addEventListener("click", function(event) {
   event.preventDefault();
@@ -560,5 +570,201 @@ document.getElementById("toggle-text-left").addEventListener("click", function(e
   } else {
       moreText.style.display = "none";
       this.textContent = "Read more";
+  }
+});
+
+
+
+
+
+// Set up the Intersection Observer for both elements
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          // Apply the animation only when the element is visible in the viewport
+          entry.target.style.animation = 'slideFadeInLeft 1.5s ease-out forwards';
+      }
+  });
+}, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+const h1 = document.querySelector('.Resume h1');
+const p = document.querySelector('.Resume p');
+
+// Observe the elements
+observer.observe(h1);
+observer.observe(p);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Blog section
+document.addEventListener("DOMContentLoaded", function () {
+  const blogButton = document.getElementById("open-blog-board");
+  const blogBoard = document.getElementById("blog-board");
+  const closeBoard = document.querySelector(".close-board");
+
+  // Blog Categories & Subcategories with Links
+  const categories = {
+      "technical": {
+          "Java": [
+              { title: "Core Java", link: "https://example.com/core-java" },
+              { title: "Java 8", link: "https://example.com/java-8" },
+              { title: "Collections", link: "https://www.geeksforgeeks.org/collections-in-java-2/" }
+          ],
+          "ML": [
+              { title: "AI", link: "https://example.com/ai" },
+              { title: "Reinforcement Learning", link: "https://example.com/reinforcement-learning" }
+          ],
+          "Python": [
+              { title: "Django", link: "https://example.com/django" },
+              { title: "Flask", link: "https://example.com/flask" }
+          ]
+      },
+      "nontechnical": {
+          "Writing": [
+              { title: "Self-Improvement", link: "https://example.com/self-improvement" },
+              { title: "Deep Thinking", link: "https://example.com/deep-thinking" }
+          ],
+          "Research": [
+              { title: "AI Innovations", link: "https://example.com/ai-innovations" },
+              { title: "Trading Strategies", link: "https://example.com/trading-strategies" }
+          ]
+      },
+      "books": {
+          "Trading": [
+              { title: "Market Psychology", link: "https://example.com/market-psychology-book" },
+              { title: "Stock Market Strategies", link: "https://example.com/stock-market-strategies-book" }
+          ],
+          "Personal Growth": [
+              { title: "Atomic Habits", link: "https://example.com/atomic-habits" },
+              { title: "The Power of Now", link: "https://example.com/the-power-of-now" }
+          ]
+      }
+  };
+
+  // Open blog board
+  if (blogButton) {
+      blogButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          blogBoard.style.display = "flex";
+      });
+  }
+
+  // Close blog board
+  closeBoard.addEventListener("click", function () {
+      blogBoard.style.display = "none";
+  });
+
+  // Toggle category expand/collapse
+  document.querySelectorAll(".category").forEach(category => {
+      category.addEventListener("click", function () {
+          const selectedCategory = this.getAttribute("data-category");
+
+          // Remove existing expanded state
+          if (this.classList.contains("expanded")) {
+              this.classList.remove("expanded");
+              this.nextElementSibling?.remove();
+              return;
+          }
+
+          // Collapse other expanded categories
+          document.querySelectorAll(".category.expanded").forEach(expandedCategory => {
+              expandedCategory.classList.remove("expanded");
+              expandedCategory.nextElementSibling?.remove();
+          });
+
+          this.classList.add("expanded");
+          const subList = document.createElement("ul");
+          subList.classList.add("subcategories");
+
+          if (categories[selectedCategory]) {
+              for (let sub in categories[selectedCategory]) {
+                  let subItem = document.createElement("li");
+                  subItem.classList.add("subcategory");
+                  subItem.innerText = sub;
+                  subItem.dataset.category = selectedCategory;
+                  subItem.dataset.subcategory = sub;
+                  subList.appendChild(subItem);
+              }
+          } else {
+              console.error(`Category '${selectedCategory}' not found!`);
+          }
+
+          this.after(subList);
+      });
+  });
+
+  // Toggle subcategory expand/collapse
+  document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("subcategory")) {
+          const selectedCategory = e.target.getAttribute("data-category");
+          const selectedSubcategory = e.target.getAttribute("data-subcategory");
+
+          // Remove existing expanded state
+          if (e.target.classList.contains("expanded")) {
+              e.target.classList.remove("expanded");
+              e.target.nextElementSibling?.remove();
+              return;
+          }
+
+          e.target.classList.add("expanded");
+          const subList = document.createElement("ul");
+          subList.classList.add("blog-list");
+
+          if (categories[selectedCategory] && categories[selectedCategory][selectedSubcategory]) {
+              categories[selectedCategory][selectedSubcategory].forEach(blog => {
+                  let blogItem = document.createElement("li");
+                  blogItem.classList.add("blog-item");
+                  blogItem.innerHTML = `<a href="${blog.link}" target="_blank" class="open-source">${blog.title}</a>`;
+                  subList.appendChild(blogItem);
+              });
+          } else {
+              console.error(`Subcategory '${selectedSubcategory}' not found in category '${selectedCategory}'!`);
+          }
+
+          e.target.after(subList);
+      }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// warning for mobile users
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("popup-container");
+
+  if (window.innerWidth <= 768) { // Check if mobile
+      popup.style.display = "flex"; // Show popup
+
+      setTimeout(() => {
+          popup.style.transition = "opacity 1s ease"; // Smooth fade-out
+          popup.style.opacity = "0";
+
+          setTimeout(() => {
+              popup.style.display = "none"; // Hide completely after fade-out
+          }, 1000);
+      }, 5000); // Show for 5 seconds before fading out
   }
 });

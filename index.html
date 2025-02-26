@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prabhat Kumar Portfolio </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -17,19 +18,21 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Patrick+Hand&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     
 
 
 </head>
 <body>
-    <div class="scroll-down-indicator">
+    <!-- <div class="scroll-down-indicator">
         <div class="arrow"></div>
     </div>
     <div class="scroll-indicator">&#x2304;</div>
 
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
-    </div>
+    </div> -->
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#"><span>Prabhat Kr.</span></a></div>
@@ -42,7 +45,9 @@
                 <li><a href="#Projects" class="menu-btn">Projects</a></li>
                 <li><a href="#Technology" class="menu-btn">Technology</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="#" id="open-blog-board" class="menu-btn">Blogs</a></li>  <!-- Prevent Page Reload -->
             </ul>
+            
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -62,18 +67,6 @@
     </script>
 
 
-
-    <!-- home section start -->
-    <!-- <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Prabhat Kumar</div>
-                <div class="text-3">And I'm Java Developer <span class="typing"></span></div>
-                <a href="#">Hire me</a>
-            </div>
-        </div>
-    </section> -->
 
 
 
@@ -156,10 +149,10 @@
 </div>
 
 <!-- Other elements in your page -->
-<div class="scroll-down-indicator">
+<!-- <div class="scroll-down-indicator">
     <div class="arrow"></div>
 </div>
-<div class="scroll-indicator">&#x2304;</div>
+<div class="scroll-indicator">&#x2304;</div> -->
 
 
 <!-- JavaScript for Clock -->
@@ -192,7 +185,41 @@
 
 
 
+ <!-- mobile phone warning -->
+ <div id="popup-container">
+    <div id="popup-message">
+        This website is best viewed on a desktop. If you're using a mobile device, please switch to desktop mode.
+    </div>
+</div>
 
+
+
+
+
+
+
+
+
+<!-- Blog Board -->
+<div id="blog-board" class="blog-board light-mode" style="display: none;">
+    <div class="blog-header">
+        <h2>My Blogs</h2>
+        <span class="close-board">&#10006;</span> <!-- Alternative close icon -->
+    </div>
+    
+    <div class="blog-content">
+        <!-- Blog Categories -->
+        <ul class="categories">
+            <li class="category" data-category="technical">Technical</li>
+            <li class="category" data-category="nontechnical">Non-Technical</li>
+            <li class="category" data-category="books">Books</li>
+        </ul>
+
+        <!-- Subcategories & Blog Links -->
+        <div id="subcategory-container"></div>
+        <div id="blog-content-container"></div>
+    </div>
+</div>
 
 
 

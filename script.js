@@ -619,7 +619,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Java": [
               { title: "Core Java", link: "https://example.com/core-java" },
               { title: "Java 8", link: "https://example.com/java-8" },
-              { title: "Collections", link: "https://www.geeksforgeeks.org/collections-in-java-2/" }
+              { title: "Collections", link: "https://www.geeksforgeeks.org/collections-in-java-2/" },
+              { title: "Design Pattern", link: "https://www.geeksforgeeks.org/collections-in-java-2/" }
           ],
           "ML": [
               { title: "AI", link: "https://example.com/ai" },
@@ -766,5 +767,25 @@ document.addEventListener("DOMContentLoaded", function () {
               popup.style.display = "none"; // Hide completely after fade-out
           }, 1000);
       }, 5000); // Show for 5 seconds before fading out
+  }
+});
+
+
+
+const fileInput = document.getElementById('file-input');
+const fileName = document.getElementById('file-name');
+
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+
+    // Check file size (10MB limit)
+    if (file.size > 10 * 1024 * 1024) {
+      alert("File size exceeds 10MB. Please upload a smaller file.");
+      fileInput.value = ""; // Clear input
+      fileName.textContent = "No file chosen";
+    } else {
+      fileName.textContent = file.name;
+    }
   }
 });

@@ -1850,14 +1850,15 @@ button:hover {
     
 }
 .contact .contact-content .text{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
     color: #481257;
 
 }
 .contact .contact-content .left p{
     text-align: justify;
+    
     
 }
 .contact .contact-content .left .icons{
@@ -2089,6 +2090,17 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+.contact .right form .file {
+    margin-bottom: 15px;
+  }
+  .contact .right form .file input {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+  }
 
 
 
@@ -2442,6 +2454,7 @@ footer span a:hover{
     width: 100%;
     background: rgba(10, 10, 10, 1);
     z-index: 1000;
+    
 }
 
 /* Close Button */
@@ -2496,7 +2509,8 @@ footer span a:hover{
 
 /* Hover Effect */
 .category:hover, .subcategory:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.316);
+    
 }
 
 /* Subcategory & Blog List Indentation */
@@ -2513,12 +2527,6 @@ footer span a:hover{
     flex-direction: column;
     gap: 5px; /* Adjust this value to increase/decrease the gap */
 }
-
-
-
-
-
-
 
 
 body {
@@ -2575,3 +2583,5 @@ body {
     max-width: 80%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+
+

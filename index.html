@@ -94,8 +94,7 @@
                 <div class="text-4">
                     <span class="typing" id="typing2"></span>
                 </div>
-<!--                 <a href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view">Download CV</a>  -->
-<!--                 <a href="https://drive.google.com/file/d/1mYigbTbeAFmlD3Xm-ZiVfEFBzvn3vc68/view">Download CV</a>  -->
+                <a href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view">Download CV</a> 
             </div>
             
             
@@ -622,8 +621,7 @@
     <section class="Resume">
         <h1> I Am Available For Full-Stack Java Developer Role.</h1>
         <p>Devoted to Excellence, Embracing a Sole Focus on Delivering My Very Best. Eager for the  opportunity to Contribute and Learn Together.</p>
-<!--         <a href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view" target="_blank"> -->
-<!--         <a href="https://drive.google.com/file/d/1mYigbTbeAFmlD3Xm-ZiVfEFBzvn3vc68/view" target="_blank"> -->
+        <a href="https://drive.google.com/file/d/1cNS4VFWxGi14rM_Xo8Zxfj3R95XOHOia/view" target="_blank">
             <button class="btn btn-primary btn-blink">Download CV</button>
         </a>
     </section>
@@ -1142,32 +1140,46 @@
                 <!-- Contact Me section  -->
                 <div class="column right">
                     <div class="text">Message Me</div>
-                    
-                    <form action="https://formsubmit.co/prabhatkumarssm72@gmail.com" method="POST">
-                      <div class="fields">
-                        <div class="field name">
-                          <input type="text" name="name" required placeholder="Name" id="name-input">
+                
+                    <!-- Thank You Message (Initially Hidden) -->
+                    <div id="thank-you-message" style="display: none; text-align: center;">
+                        <h1>Thank You! 🎉</h1>
+                        <p>Your message has been sent successfully. I'll get back to you soon!</p>
+                        <img src="thankyou.png" alt="Thank You Image" style="max-width: 300px; display: block; margin: 10px auto;">
+                        <br>
+                        <a href="https://hugs-4-bugs.github.io/myResume/" style="text-decoration: none; background: #007BFF; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+                            Back to Home
+                        </a>
+                    </div>                    
+                
+                    <!-- Contact Form -->
+                    <form id="contact-form" action="https://formsubmit.co/prabhatkumarssm72@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="return showThankYou(event)" target="_blank">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" required placeholder="Name" id="name-input" oninput="checkForm()">
+                            </div>
+                            <div class="field email">
+                                <input type="email" name="email" required placeholder="Email" id="email-input" oninput="checkForm()">
+                            </div>
                         </div>
-                        <div class="field email">
-                          <input type="email" name="email" required placeholder="Email" id="email-input">
+                        <div class="field">
+                            <input type="text" name="subject" required placeholder="Subject" id="subject-input" oninput="checkForm()">
                         </div>
-                      </div>
-                      <div class="field">
-                        <input type="text" name="subject" required placeholder="Subject" id="subject-input">
-                      </div>
-                      <div class="field textarea">
-                        <textarea name="message" required placeholder="Message" id="message-input"></textarea>
-                      </div>
-                      
-                      <input type="hidden" name="_captcha" value="false">
-                      <input type="hidden" name="_template" value="table">
-                      <!-- <input type="hidden" name="_template" value="box"> -->
-                      <input type="hidden" name="_next" value="https://shorturl.at/huvBE">
-                      <div class="button-area">
-                        <button type="submit" id="submit-btn" disabled>No cheating 😀</button>
-                      </div>
+                        <div class="field textarea">
+                            <textarea name="message" required placeholder="Message" id="message-input" oninput="checkForm()"></textarea>
+                        </div>
+                        <div class="field file">
+                            <input type="file" name="attachment" id="file-input" accept=".jpg,.png,.pdf,.docx,.txt">
+                        </div>
+                
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                
+                        <div class="button-area">
+                            <button type="submit" id="submit-btn" disabled>No cheating 😀</button>
+                        </div>
                     </form>
-                  </div>
+                </div>
                   
                   <script>
                     const nameInput = document.getElementById('name-input');
@@ -1175,48 +1187,90 @@
                     const subjectInput = document.getElementById('subject-input');
                     const messageInput = document.getElementById('message-input');
                     const submitBtn = document.getElementById('submit-btn');
-                  
+                    const fileInput = document.getElementById('file-input');
+                    
                     const validateForm = () => {
-                      const nameValue = nameInput.value;
-                      const emailValue = emailInput.value;
-                      const subjectValue = subjectInput.value;
-                      const messageValue = messageInput.value;
-                      const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/;
-                  
-                      if (nameValue && emailValue && subjectValue && messageValue && emailRegex.test(emailValue)) {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Send Message';
-                        
-                      } else {
-                        submitBtn.disabled = true;
-                        submitBtn.textContent = 'No cheating 😀';
-                      }
+                        const nameValue = nameInput.value.trim();
+                        const emailValue = emailInput.value.trim();
+                        const subjectValue = subjectInput.value.trim();
+                        const messageValue = messageInput.value.trim();
+                        const fileValue = fileInput.files.length > 0 ? fileInput.files[0] : null; // File optional
+                        const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/;
+                    
+                        if (nameValue && emailValue && subjectValue && messageValue && emailRegex.test(emailValue)) {
+                            if (fileValue && fileValue.size > 10 * 1024 * 1024) {
+                                submitBtn.disabled = true;
+                                submitBtn.textContent = 'File too big! ❌';
+                            } else {
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Send Message';
+                            }
+                        } else {
+                            submitBtn.disabled = true;
+                            submitBtn.textContent = 'No cheating 😀';
+                        }
                     };
-                  
+                    
                     nameInput.addEventListener('input', validateForm);
                     emailInput.addEventListener('input', validateForm);
                     subjectInput.addEventListener('input', validateForm);
                     messageInput.addEventListener('input', validateForm);
-                  
+                    fileInput.addEventListener('change', validateForm);
+                    
                     submitBtn.addEventListener('mouseover', () => {
-                      if (!emailInput.value.match(/^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/)) {
-                        submitBtn.style.position = 'relative';
-                        submitBtn.style.left = `${Math.random() * 280}px`;
-                        submitBtn.style.right = `${Math.random() * 190}px`;
-                        submitBtn.style.top = `${Math.random() * 130}px`;
-                        submitBtn.style.bottom = `${Math.random() * 140}px`;
-                      }
+                        if (!emailInput.value.match(/^[a-zA-Z0-9._%+-]+@(gmail|yahoo|hotmail|outlook)\.com$/)) {
+                            submitBtn.style.position = 'relative';
+                            submitBtn.style.left = `${Math.random() * 280}px`;
+                            submitBtn.style.right = `${Math.random() * 190}px`;
+                            submitBtn.style.top = `${Math.random() * 130}px`;
+                            submitBtn.style.bottom = `${Math.random() * 140}px`;
+                        }
                     });
-                  
+                    
                     emailInput.addEventListener('mouseover', () => {
-                      submitBtn.style.position = 'static';
-                      submitBtn.style.left = '0px';
-                      submitBtn.style.top = '0px';
+                        submitBtn.style.position = 'static';
+                        submitBtn.style.left = '0px';
+                        submitBtn.style.top = '0px';
                     });
+                    
+                    function showThankYou(event) {
+                        event.preventDefault(); // Default submit prevent kar diya
+                    
+                        let form = document.getElementById("contact-form");
+                        let formData = new FormData(form);
+                        let submitBtn = document.getElementById("submit-btn");
+                    
+                        // Button text change karke "Sending..." karo
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = "Sending...";
+                    
+                        fetch(form.action, {
+                            method: form.method,
+                            body: formData
+                        }).then(response => {
+                            if (response.ok) {
+                                // Form hide karke Thank You message show karo
+                                form.style.display = "none";
+                                document.getElementById("thank-you-message").style.display = "block";
+                            }
+                        }).catch(error => {
+                            console.error("Error:", error);
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = "Send Message"; // Agar error aaye to wapas enable kar do
+                        });
+                    
+                        return false; // Default form submission prevent karna
+                    }                    
                   </script>
             </div>
         </div>
     </section>
+
+
+
+
+
+
 
 
 
@@ -1259,7 +1313,7 @@
     
     <!-- footer section start -->
     <footer>
-        <span>Created By <a>Prabhat Kumar</a> | <span class="far fa-copyright"></span> 2025 All rights reserved.</span>
+        <span>Created By <a>Prabhat Kumar</a> | <span class="far fa-copyright"></span>2025 All rights reserved.</span>
     </footer>
     <script src="script.js"></script>
 

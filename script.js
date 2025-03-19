@@ -457,12 +457,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const text1 = "Java Developer";
   // const text2 = "and the Founder of QuantumCrypto, NebulaFusion, and QuantumFusion Solutions";
-  const text2 = "and the Founder of QuantumFusion Solutions, and NebulaFusion";
+  // const text2 = "and the Founder of QuantumFusion Solutions, and NebulaFusion";
+    const text2 = "and an Intraday Futures & Options, Crypto, and Forex trader with 4+ years of experience";
 
   let index1 = 0;
   let index2 = 0;
   let typing1Active = true; // Flag to determine which text is being typed
-  const companyNames = ["QuantumFusion Solutions", "NebulaFusion", "QuantumFusion Solutions"];
+  // const companyNames = ["QuantumFusion Solutions", "NebulaFusion", "QuantumFusion Solutions"];
+  const companyNames = ["Futures & Options", "Crypto", "Forex"];
   const companyColors = ["#333333", "#333333", "#333333"]; // Different colors for each company
   const companyLinks = [
     "https://www.quantumfusionsolutions.com",  // Replace with your link
